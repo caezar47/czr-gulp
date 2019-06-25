@@ -1,0 +1,147 @@
+//===== media point =====//
+@media-point-xxs: ~"(max-width: 565px)";
+@media-point-xxs-l: ~"(max-width: 565px) and (orientation:landscape)";
+@media-point-xs: ~"(min-width: 567px) and (max-width: 767px)";
+@media-point-sm: ~"(min-width: 768px) and (max-width: 991px)";
+@media-point-smx: ~"(min-width: 567px) and (max-width: 1399px)";
+@media-point-md: ~"(min-width: 992px) and (max-width: 1199px)";
+@media-point-md1: ~"(min-width: 992px) and (max-width: 1024px)";
+@media-point-md2: ~"(min-width: 1025px) and (max-width: 1199px)";
+@media-point-lg: ~"(min-width: 1200px) and (max-width: 1399px)";
+@media-point-lg1: ~"(min-width: 1200px) and (max-width: 1299px)";
+@media-point-lg2: ~"(min-width: 1300px) and (max-width: 1399px)";
+@media-point-mdl: ~"(min-width: 992px) and (max-width: 1399px)";
+@media-point-mdl2: ~"(min-width: 1025px) and (max-width: 1399px)";
+@media-point-xl: ~"(min-width: 1400px) and (max-width: 1699px)";
+@media-point-xxl: ~"(min-width: 1700px)";
+@media-point-screen: ~"(min-width: 1025px)";
+@media-point-screen-lg: ~"(min-width: 1200px)";
+@media-point-screen-xl: ~"(min-width: 1400px)";
+@media-point-device: ~"(max-width: 1024px)";
+@media-point-device-lg: ~"(max-width: 1199px)";
+@media-point-device-xl: ~"(max-width: 1399px)";
+@media-point-tablet: ~"(min-width: 768px) and (max-width: 1024px)";
+@media-point-tablet-xs: ~"(min-width: 567px) and (max-width: 1024px)";
+@media-point-tablet-lg: ~"(min-width: 768px) and (max-width: 1199px)";
+@media-point-smart: ~"(max-width: 767px)";
+@media-point-smart-lg: ~"(max-width: 991px)";
+@media-point-notsmart: ~"(min-width: 768px)";
+@media-point-notsmart-lg: ~"(min-width: 992px)";
+@media-point-notxxs: ~"(min-width: 567px)";
+
+//===== heading =====//
+.heading1(){
+	.calcFontSize(30, 56, 320, 1680);
+	.calcLineHeight(34, 60, 320, 1680);
+	font-family: @b-ff-2;
+	color: @b-color-h;
+}
+.heading2(){
+	.calcFontSize(28, 46, 320, 1680);
+	.calcLineHeight(32, 50, 320, 1680);
+}
+.heading3(){
+	.calcFontSize(24, 34, 320, 1680);
+	.calcLineHeight(28, 38, 320, 1680);
+}
+.heading4(){
+	.calcFontSize(24, 30, 320, 1680);
+	.calcLineHeight(28, 34, 320, 1680);
+}
+.heading5(){
+	.calcFontSize(20, 23, 320, 1680);
+	.calcLineHeight(23, 27, 320, 1680);
+	//font-size: @b-fs + 2;
+	//line-height: @b-lh - 2;	
+}
+.heading6(){
+	//.calcFontSize(14, 15, 320, 1680);
+	//.calcLineHeight(16, 18, 320, 1680);	
+	font-size: @b-fs;
+	line-height: @b-lh;	
+}
+
+//===== adaptiv fs and lh =====//
+.calcFontSize(@f-min, @f-max, @v-min, @v-max){
+	font-size: ~"calc( (100vw - @{v-min}px) / (@{v-max} - @{v-min}) * (@{f-max} - @{f-min}) + @{f-min}px)";
+}
+.calcLineHeight(@f-min, @f-max, @v-min, @v-max){
+	line-height: ~"calc( (100vw - @{v-min}px) / (@{v-max} - @{v-min}) * (@{f-max} - @{f-min}) + @{f-min}px)";
+}
+//===== flex cols =====//
+.makeCols(@columns, @grid-columns) {
+    flex-basis: percentage((@columns / @grid-columns));
+    max-width: percentage((@columns / @grid-columns));
+}
+.makeColsOffset(@columns, @grid-columns) {
+	@percentage: percentage((@columns / @grid-columns ));
+    margin-left: ~"calc(@{percentage})";
+}
+.makeColsOffset(@columns, @grid-columns) {
+	@percentage: percentage((@columns / @grid-columns ));
+    margin-left: ~"calc(@{percentage})";
+}
+.makeColsPull(@columns, @grid-columns) {
+	@percentage: percentage((@columns / @grid-columns ));
+    margin-right: ~"calc(@{percentage})";
+}
+//===== btn clearfix =====//
+.btn-clearfix(){
+	outline: none;
+	background: none;
+	text-decoration: none;
+	transition: @trs-site;
+	border: 0;
+	padding: 0;
+}
+//===== azbn =====//
+#site {
+	.bi(@img:'') {
+		background-image:url('@{url-path-img}/@{img}');
+	}
+	.bg(@color:#ffffff) {
+		background-color:@color;
+	}
+	.bpos(@pos:center center) {
+		background-position:@pos;
+	}
+	.brep(@rep:no-repeat) {
+		background-repeat:@rep;
+	}
+	.bsize(@s:initial) {
+		background-size:@s;
+	}
+	.color(@color:#ffffff) {
+		color:@color;
+	}
+	.underline(@val:underline) {
+		text-decoration:@val;
+	}
+	.uppercase(@val:uppercase) {
+		text-transform:@val;
+	}
+	.size(@val:10px) {
+		font-size:@val;
+	}
+	.bold(@val:bold) {
+		font-weight:@val;
+	}
+	.italic(@val:italic) {
+		font-style:@val;
+	}
+	.z(@val:1) {
+		z-index:@val;
+	}
+	.lh(@val:1em) {
+		line-height:@val;
+	}
+	.ff(@val:Arial) {
+		font-family:@val;
+	}
+	.w(@val:0px) {
+		width:@val;
+	}
+	.h(@val:0px) {
+		height:@val;
+	}
+}

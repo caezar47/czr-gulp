@@ -1,0 +1,6 @@
+<h4 class="{{prefix}}heading">{{heading}}</h4>
+<div class="{{prefix}}block">
+	<div class="{{prefix}}row  row  is--gutter">
+		{% include "card.twig" with {prefix:"color-card__", group:"cols", list: [{color: "white"},{color: "black"},{color: "default"},{color: "primary"},{color: "success"},{color: "info"},{color: "warning"},{color: "danger"}]} %}
+	</div>
+</div>

@@ -1,0 +1,52 @@
+.include-custom-font(
+	@family: @roboto, 
+	@src-name: @roboto, 
+	@weight: normal, 
+	@style: normal
+	){
+	@font-face{			
+		font-family: "@{family}";			
+		src:	url('@{url-path-fonts}/@{src-name}.woff2') format('woff2'),
+				url('@{url-path-fonts}/@{src-name}.woff') format('woff');
+		font-weight: @weight;
+		font-style: @style;		
+	}
+}
+.include-custom-icon(@family: @icon, @weight: normal, @style: normal){
+	@font-face{			
+		font-family: "@{family}";			
+		src: url('@{url-path-fonts}/@{family}.woff') format('woff');
+		font-weight: @weight;
+		font-style: @style;		
+	}
+}
+.include-custom-font(
+	@family: @roboto,
+	@src-name: @roboto,
+	@weight: 400, 
+	@style: normal
+	);
+.include-custom-font(
+	@family: @roboto,
+	@src-name: @roboto-300,
+	@weight: 300, 
+	@style: normal
+	);
+.include-custom-font(
+	@family: @roboto,
+	@src-name: @roboto-300i,
+	@weight: 300, 
+	@style: italic
+	);
+.include-custom-font(
+	@family: @roboto,
+	@src-name: @roboto-700,
+	@weight: 700, 
+	@style: normal
+	);
+.include-custom-font(
+	@family: @din,
+	@src-name: @din,
+	@weight: 400, 
+	@style: normal
+	);

@@ -1,0 +1,73 @@
+{% set title = "Twig.js templating test" %}
+<!DOCTYPE html>
+<html dir="ltr" lang="ru-RU"> 
+	<head>	
+		<title>{{ title }}</title>
+		[[azbntple 
+			tpl="/src/block/common/head/.html" 
+			title="  "
+			description="  "
+		]]			
+	</head>
+	<body class="is--index-page">
+
+    	{% include "../common/navbar/navbar.html" %}
+
+		[[azbntple 
+			tpl="/src/block/common/navbar/navbar.html"
+			navbar_prefix="navbar__"
+			navbar_mod="is--scroll  is--index"
+		]]
+		[[azbntple 
+			tpl="/src/block/common/header/panel.html"
+			block_prefix="header-block__"
+			block_heading="Heading"
+			block_heading_small="Heading small"
+			block_btn="Button"
+			block_bg="{{url-path-img}}/temp/bg-index-header.jpg"
+		]]	
+		[[azbntple  
+			tpl="/src/block/page/index/adv.html"
+			content_prefix="content-block__"
+			content_mod="is--index-adv"
+			content_id="adv-block"
+		]]
+		[[azbntple  
+			tpl="/src/block/page/services/index.html"
+			content_prefix="content-block__"  
+			content_mod="is--services-index"
+			content_id="services-block"
+			content_bg="{{url-path-img}}/temp/bg-index-services.jpg"
+			block_heading_group="  "
+			block_heading_mod="is--ff-2  is--h1"
+			block_heading_level="h2"
+			block_heading="Наши услуги"
+		]]
+		[[azbntple  
+			tpl="/src/block/page/about/index.html"
+			content_prefix="content-block__"  
+			content_mod="is--about-index"
+			content_id="about-block"
+			block_heading_group="  "
+			block_heading_mod="is--ff-2  is--h1"
+			block_heading_level="h2"
+			block_heading="О компании"
+		]]
+		[[azbntple  
+			tpl="/src/block/page/portfolio/index.html"
+			content_prefix="content-block__"  
+			content_mod="is--portfolio-index"
+			content_id="portfolio-block"
+			block_heading_group="  "
+			block_heading_mod="is--ff-2  is--h1"
+			block_heading_level="h2"
+			block_heading="Наши работы"
+		]]	
+		[[azbntple 
+			tpl="/src/block/common/footer/footer.html"
+			footer_prefix="footer__" 
+		]]
+		[[azbntple tpl="/src/block/common/modals/include.html" ]]
+		[[azbntple tpl="/src/block/common/script/script.html" ]]
+	</body>
+</html>

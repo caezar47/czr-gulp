@@ -1,0 +1,16 @@
+<main class="{{content_prefix}}panel">
+	<div class="{{content_prefix}}container container  is--default-page  is--full">
+		{% include "../../common/page-header/tpl.twig" with {prefix:"page-header__", mod:heading_mod, group:heading_group, level:heading_level, heading:heading, level_sm:heading_sm_level, heading:heading_sm, bread:bread, bread_mod:bread_mod, bread_l1:bread_l1, bread_l1_link:bread_l1_link, bread_l2:bread_l2, bread_l2_link:bread_l2_link } %}			
+		<div class="{{content_prefix}}elem  {{content_mod}}">		
+			<div class="{{content_prefix}}text-block  text__block  {{content_mod}}">
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur officiis consectetur in autem tempora quasi repellat ducimus nemo quod dolorum!</p>
+			</div>
+		</div>	
+		<div class="{{content_prefix}}elem  {{content_mod}}">
+			<h3 class="{{content_prefix}}heading  {{content_mod}}">Фото работ</h3>
+			<div class="{{content_prefix}}slick" data-slider-slick="slick-gallery">
+				{% include "../../common/card/card.twig" with {"view":"gallery", prefix:"card-item__", mod:"is--gallery", fancy:"gallery", list: [{"img":"http://via.placeholder.com/400x400","img_fancy":"/temp/header-slider-item1.jpg"},{"img":"http://via.placeholder.com/400x400","img_fancy":"/temp/header-slider-item2.jpg"},{"img":"http://via.placeholder.com/400x400","img_fancy":"/temp/header-slider-item2.jpg"},{"img":"http://via.placeholder.com/400x400","img_fancy":"/temp/header-slider-item2.jpg"},{"img":"http://via.placeholder.com/400x400","img_fancy":"/temp/header-slider-item2.jpg"},{"img":"http://via.placeholder.com/400x400","img_fancy":"/temp/header-slider-item2.jpg"}]} %}
+			</div>
+		</div>
+	</div>
+</main>

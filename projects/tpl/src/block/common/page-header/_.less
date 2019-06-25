@@ -1,0 +1,66 @@
+.page-header__{	
+	&group{}	
+	&container{}
+	&panel{	
+		margin-bottom: 30px;
+		@media @media-point-screen {margin-bottom: 2.5vw;}
+		.form__block &{
+			@media @media-point-screen {margin-bottom: 2vw;}
+		}
+		.modal__block &{
+			@media @media-point-screen {margin-bottom: 1.8vw;}
+		}
+		#modal-message &{
+			margin-bottom: 0;
+		}
+		&.is--gap-sm{
+			margin-bottom: 20px;
+			@media @media-point-screen {
+				margin-bottom: 30px;
+			}
+		}
+	}
+	&row{
+		align-items: center;
+		justify-content: space-between;
+		@media @media-point-xxs {
+			flex-wrap: wrap;
+		}
+	}
+	&cols{
+		&.is--heading{
+			flex-grow: 1;
+		}
+		&.is--btn{}
+	}
+	&heading{
+		margin: 0;
+		position: relative;
+		@media @media-point-smart {
+			br {display: none;}
+		}
+		//heading
+		&.is--h1{.heading1();}	
+		&.is--h2{.heading2();}		
+		&.is--h3{.heading3();}			
+		&.is--h4{.heading4();}		
+		&.is--h5{.heading5();}		
+		&.is--h6{.heading6();}	
+		&.is--ff-2{font-family: @b-ff-2;}
+		&.is--fw-400{font-weight: 400;}
+		&.is--fw-700{font-weight: 700;}
+		&.is--fw-900{font-weight: 900;}
+	}
+	&heading-small{
+		font-size: @b-fs;
+		line-height: @b-lh;
+		font-weight: 400;
+		margin: 0;
+		.page-header__heading + &{
+			padding-top: 5px;
+		}
+		@media @media-point-smart {
+			br {display: none;}
+		}
+	}
+}

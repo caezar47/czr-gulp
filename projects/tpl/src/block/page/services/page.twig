@@ -1,0 +1,10 @@
+<main class="{{content_prefix}}panel  {{content_mod}}">
+	<div class="{{content_prefix}}container container  is--full">
+		{% include "../../common/page-header/tpl.twig" with {prefix:"page-header__", mod:heading_mod, group:heading_group, level:heading_level, heading:heading, level_sm:heading_sm_level, heading:heading_sm, bread:bread, bread_mod:bread_mod, bread_l1:bread_l1, bread_l1_link:bread_l1_link, bread_l2:bread_l2, bread_l2_link:bread_l2_link } %}		
+		<div class="{{content_prefix}}elem  {{content_mod}}">			
+			<div class="{{content_prefix}}grid-row  grid__row  is--columns-3">
+				{% include "../../common/card/card.twig" with {view: "preview", prefix:"card-item__", mod:"is--services", list: [{"heading":"Lorem ipsum dolor.", "link":page.services_card, "img":"http://via.placeholder.com/500x310"},{"heading":"Lorem ipsum dolor.", "link":page.services_card, "img":"http://via.placeholder.com/500x310"}, {"heading":"Lorem ipsum dolor.", "link":page.services_card, "img":"http://via.placeholder.com/500x310"}, {"heading":"Lorem ipsum dolor.", "link":page.services_card, "img":"http://via.placeholder.com/500x310"}, {"heading":"Lorem ipsum dolor.", "link":page.services_card, "img":"http://via.placeholder.com/500x310"}, {"heading":"Lorem ipsum dolor.", "link":page.services_card, "img":"http://via.placeholder.com/500x310"}]} %}
+			</div>
+		</div>		
+	</div>
+</main>

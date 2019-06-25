@@ -1,0 +1,100 @@
+{% if view == "input" %}
+{% for value in list %}	
+<div class="{{prefix}}item  {{mod}}  {{value.mod_elem}}">
+	<input type="{{value.type}}" class="{{prefix}}control form-control {{value.validate}}  {{mod}}  {{value.color}}" id="{{value.form_id}}[{{value.id}}]" name="f[{{value.name}}]" placeholder="{{value.placeholder}}">
+</div>
+{% endfor %}
+{% endif %}
+
+{% if view == "select" %}
+<div class="{{prefix}}item  {{mod}}  {{mod_elem}}">
+	<select class="{{prefix}}control form-control {{value.validate}}  {{mod}}  {{color}}" id="{{form_id}}[{{id}}]" name="f[{{name}}]">
+		{% for value in list %}
+			<option value="{{value.val}}" {{value.status}}>{{value.name}}</option>
+		{% endfor %}	
+	</select>
+</div>
+{% endif %}
+
+{% if view == "radio" %}
+<div class="{{prefix}}item  is--radio  {{mod}}  {{mod_elem}}">
+	{% for value in list %}
+	<label class="{{prefix}}radio  {{mod}}  {{color}}">
+		<input class="{{prefix}}radio-input  {{mod}}  {{color}}" type="radio" id="{{value.form_id}}[{{value.id}}]" name="f[{{value.name}}]" {{value.status}}>
+		<span class="{{prefix}}radio-box  {{mod}}  {{color}}">
+			<svg class="{{prefix}}radio-icon  {{mod}}  {{color}}" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+				<path fill-rule="evenodd" clip-rule="evenodd" d="M13.908 7.448c.47.44.507 1.193.085 1.682l-4.114 4.762c-.214.246-.516.39-.834.394a1.121 1.121 0 0 1-.844-.37l-2.172-2.382a1.226 1.226 0 0 1 .042-1.683 1.11 1.11 0 0 1 1.615.043l1.32 1.448 3.288-3.805a1.111 1.111 0 0 1 1.614-.089z"/>
+			</svg>
+		</span>
+		{{value.label}}
+	</label>
+	{% endfor %}
+</div>
+{% endif %}
+
+{% if view == "checkbox" %}
+<div class="{{prefix}}item  is--switch  {{mod}}  {{mod_elem}}">
+	{% for value in list %}
+	<label class="{{prefix}}check  {{mod}}  {{color}}">
+		<input class="{{prefix}}check-input  {{mod}}  {{color}}" type="checkbox" id="{{value.form_id}}[{{value.id}}]" name="f[{{value.name}}]" {{value.status}}>
+		<span class="{{prefix}}check-box  {{mod}}  {{color}}">
+			<svg class="{{prefix}}check-icon  {{mod}}  {{color}}" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+				<path fill-rule="evenodd" clip-rule="evenodd" d="M13.908 7.448c.47.44.507 1.193.085 1.682l-4.114 4.762c-.214.246-.516.39-.834.394a1.121 1.121 0 0 1-.844-.37l-2.172-2.382a1.226 1.226 0 0 1 .042-1.683 1.11 1.11 0 0 1 1.615.043l1.32 1.448 3.288-3.805a1.111 1.111 0 0 1 1.614-.089z"/>
+			</svg>
+		</span>
+		{{value.label}}
+	</label>
+	{% endfor %}
+</div>
+{% endif %}
+
+{% if view == "textarea" %}	
+<div class="{{prefix}}item  {{mod}}  {{mod_elem}}">
+	<textarea class="{{prefix}}control form-control {{validate}}  {{mod}}  {{color}}" id="{{form_id}}[{{id}}]" name="f[{{name}}]" placeholder="{{placeholder}}"></textarea>
+</div>
+{% endif %}
+
+{% if view == "file" %}
+<label class="{{prefix}}file  {{mod}}  {{mod_elem}}">	
+	<span class="{{prefix}}file-icon  {{mod}}  {{color}}"><svg width="18" height="26" xmlns="http://www.w3.org/2000/svg"><path d="M12.8919 3.5547h-1.9946V2.2852C10.8973 1.0252 9.9152 0 8.7081 0h-2.919C4.5822 0 3.6 1.0252 3.6 2.2852v1.2695H0V26h18V8.8867c0-2.9401-2.2914-5.332-5.1081-5.332zm.7297 1.6c1.4276.3037 2.5546 1.4802 2.8456 2.9703h-2.8456V5.1547zM5.0595 2.2852c0-.42.3274-.7618.7297-.7618h2.919c.4022 0 .7296.3418.7296.7618v1.2695H5.0595V2.2852zm11.481 22.1914H1.4595V5.0781H3.6v8.2774c0 1.26.982 2.2851 2.1892 2.2851 1.207 0 2.1892-1.0251 2.1892-2.2851V7.8203H6.5189v5.5352c0 .4199-.3274.7617-.7297.7617s-.7297-.3418-.7297-.7617V5.0781h7.1027v4.5703h4.3783v14.8282z"/></svg></span>
+	<input type="file"  class="{{prefix}}file-input  {{mod}}  {{color}}" id="{{form_id}}[{{id}}]" name="f[{{name}}]">
+	<span class="{{prefix}}file-name  {{mod}}  {{color}}" data-heading="Прикрепить резюме">Прикрепить резюме</span>
+</label>
+{% endif %}
+
+{% if view == "range" %}
+<div class="{{prefix}}item  {{mod}}  {{mod_elem}}">
+	<div class="{{prefix}}label  {{mod}}  {{mod_elem}}">
+		{{label}}
+	</div>
+	<input type="text" class="js-range-slider" 
+		data-min="{{min}}" 
+		data-max="{{max}}"
+		data-from="{{from}}"
+		data-to="{{to}}"
+		data-type="{{type}}"
+		data-step="{{step}}">
+</div>
+{% endif %}
+
+{% if view == "reset" %}
+<div class="{{prefix}}item  is--reset  {{mod}}  {{mod_elem}}">
+	<button type="reset" class="{{prefix}}reset  {{mod}}  {{color}}">
+		<svg class="{{prefix}}reset-icon  {{mod}}  {{color}}  {{mod_elem}}" viewBox="0 0 22 20" xmlns="http://www.w3.org/2000/svg">
+			<path class="{{prefix}}reset-icon-check  {{mod}}  {{color}}  {{mod_elem}}" d="M21.4553 8.926c-.481-.3208-1.1309-.1908-1.4515.2901l-.0312.0467C19.594 4.0917 15.2661 0 10 0 4.486 0 0 4.486 0 10s4.486 10 10 10c.7707 0 1.3955-.6248 1.3955-1.3956 0-.7708-.6248-1.3956-1.3955-1.3956-3.975 0-7.2088-3.2339-7.2088-7.2088S6.025 2.7912 10 2.7912c3.6842 0 6.7312 2.7783 7.1573 6.3497-.3359-.4181-.9411-.518-1.3956-.2148-.481.3207-.6109.9706-.2902 1.4515l2.0726 3.108c.2446.3668.6426.5858 1.0645.5858.422 0 .8198-.2191 1.0643-.5858l2.0726-3.108c.3206-.481.1907-1.1308-.2902-1.4515z"/>
+		</svg>
+		<div class="{{prefix}}reset-label  {{mod}}  {{color}}">
+			{{name}}
+		</div>
+	</button>	
+</div>
+{% endif %}
+
+{% if view == "agreement" %}
+<div class="{{prefix}}item  {{mod}}  {{mod_elem}}  is--agreement">
+	<input type="hidden" name="f[Согласие на обработку персональных данных]" value="Да">
+	<div class="{{prefix}}text  {{mod}}  is--agreement">	
+		Нажимая на кнопку <span {% if heading_view == "modal" %}data-btn-heading{% endif %}>«{{btn_name}}»</span>, Вы соглашаетесь с правилами обработки <a href="{{page.agreement}}" target="_blank">персональных данных</a>
+	</div>	
+</div>
+{% endif %}

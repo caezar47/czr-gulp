@@ -1,0 +1,110 @@
+.modal-open {
+	overflow: hidden; 
+}
+.modal__ {
+	&block{
+		display: none;
+		overflow: hidden;
+		position: fixed;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		left: 0;
+		z-index: 1000;
+		-webkit-overflow-scrolling: touch;
+		outline: 0;		
+		.modal-open &{
+			overflow-x: hidden;
+			overflow-y: auto;
+			@media @media-point-notsmart{overflow-y: hidden;}
+		}		
+		//display: block;
+		//opacity: 1;
+		//background: @black;
+	}
+	&dialog {
+		transition: all 0.5s;
+		position: relative;
+		width: auto;	
+		margin: 0px;
+		@media @media-point-notsmart {
+			box-shadow: 6px 8px 16px fadeout(@black, 80%);
+		}
+		@media @media-point-tablet 	{
+			width: @modal_width_device;	
+			margin: 10px auto;
+		}  
+		@media @media-point-screen 	{
+			width: @modal_width;	
+			margin: 0px auto;
+			&.is--lg{
+				width: @modal_width + 320;
+			}
+		} 
+		.modal__block.fade &{
+			left: -100%;
+		}
+		.modal__block.in &{
+			left: 0;
+		}
+		@media @media-point-notsmart{			
+			.modal__block.fade &{
+				top: 0;
+				left: inherit;
+			}
+			.modal__block.in &{
+				top: 5%;
+				left: inherit;
+			}
+		}
+	}
+	&body {
+		position: relative;
+		background: @white;
+		padding: 35px 40px;
+		@media @media-point-notsmart {			
+			border-radius: @modal_border_rad;
+		}
+		@media @media-point-tablet{padding: 70px 60px 50px;}
+		@media @media-point-screen{padding: 3.8vw 5vw;}
+	}
+	&content{}
+	&btn-close{
+		.btn-clearfix();
+	    position: absolute;
+	    z-index: 5; 
+		top: 15px;
+		right: 15px;
+	    border-width: @modal_btn_border; 
+	    border-style: solid; 
+	    border-color: @modal_btn_border_color; 
+	   	color: @modal_btn_color;
+	   	background-color: @modal_btn_bg; 
+	   	border-radius: @modal_btn_border_rad;
+		width: @modal_btn_width;
+		height: @modal_btn_width;
+		padding: 8px;
+		svg{display: block;}
+	   	transition: @trs-site;  	 
+		&:hover{
+			background-color: @modal_btn_bg_hover;
+			border-color: @modal_btn_border_color_hover;
+			color: @modal_btn_color_hover;
+		}
+	}
+}
+.modal-backdrop {
+	position: fixed;
+	top: 0;
+	right: 0;
+	bottom: -1px;
+	left: 0;
+	z-index: 940;
+	background-color: @modal_backdrop;
+	&.fade { 
+		opacity: 0;
+	}
+	&.in {
+		opacity: @modal_backdrop_fade;
+	}
+}

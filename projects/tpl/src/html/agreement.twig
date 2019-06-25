@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="ru-RU"> 
+	<head>	
+    	{% include "../block/common/head/head.twig" with {title:"agreement"}  %}
+	</head>
+	<body>
+    	{% include "../block/common/navbar/navbar.twig" with {navbar_prefix:"navbar__", navbar_mod:"is--scroll"} %}
+
+		{% include "../block/page/agreement.twig" with {content_prefix:"content-block__", content_mod:"", heading_group:"", heading_mod:"is--h2  is--ff-2  align--center-notsmart", heading_level:"h1", heading:"Соглашение на обработку персональных данных сайтом", bread_mod:"justify--center-notsmart", bread:"Соглашение на обработку персональных данных сайтом"} %}
+
+    	{% include "../block/common/footer/footer.twig" with {footer_prefix:"footer__"} %}
+
+    	{% include "../block/common/modals/include.twig"%}
+    	{% include "../block/common/script/script.twig"%}
+	</body>
+</html> 

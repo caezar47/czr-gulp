@@ -1,0 +1,84 @@
+body {
+	font-family: @b-ff;	
+	font-size: @b-fs;
+	line-height: @b-lh;
+	font-weight: 300;
+}
+h1, h2, h3, h4, h5, h6{
+	margin: 0 0 10px;
+	font-weight: 400;
+}
+//p{margin: 0 0 10px;}
+i, em{font-style: italic;}
+b, strong{font-weight: 700; color: @black}
+.page_header(){
+	font-family: @page_header_ff;
+	color: @page_header_color;
+}
+
+h1{
+	.heading1();	
+}
+h2{
+	.heading2();
+}
+h3{	
+	.heading3();
+}
+h4{
+	.heading4();
+}
+h5{
+	.heading5();
+}
+h6{
+	.heading6();
+}
+ol{
+	margin-left: 30px;
+	li{padding-left: 5px;}
+}
+ul{
+	margin-left: 20px;
+	&.ul-site{
+		li{
+			margin-bottom: 10px; 
+			&:last-child{margin-bottom: 0;}			
+		}
+	}
+}
+.align--{
+	&left{
+		text-align: left;
+	}
+	&right{
+		text-align: right;
+	}
+	&center{
+		text-align: center;
+	}
+	&center-notsmart{
+		@media @media-point-notsmart {
+			text-align: center;
+		}
+	}
+}
+.justify--{
+	&start{
+		justify-content: flex-start;
+	}
+	&end{
+		justify-content: flex-end;
+	}
+	&center{
+		justify-content: center;
+	}
+	&between{
+		justify-content: space-between;
+	}
+	&center-notsmart{
+		@media @media-point-notsmart {
+			justify-content: center;
+		}
+	}
+}

@@ -1,0 +1,20 @@
+<div class="{{prefix}}block  {{mod}}">
+	<ul class="{{prefix}}list  {{mod}}">
+		<li class="{{prefix}}list-item">
+			<a href="{{page.index}}" class="{{prefix}}list-link">Главная</a>
+		</li>
+		{% if bread_l1 != null %}
+		<li class="{{prefix}}list-item">
+			<a href="{{bread_l1_link}}" class="{{prefix}}list-link">{{bread_l1}}</a>
+		</li>
+		{% endif %}
+		{% if bread_l2 != null %}
+		<li class="{{prefix}}list-item">
+			<a href="{{bread_l2_link}}" class="{{prefix}}list-link">{{bread_l2}}</a>
+		</li>
+		{% endif %}
+		<li class="{{prefix}}list-item is--active">
+			<span class="{{prefix}}list-link">{{bread}}</span>
+		</li>
+	</ul>
+</div>

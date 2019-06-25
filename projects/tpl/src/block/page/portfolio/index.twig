@@ -1,0 +1,11 @@
+<div class="{{content_prefix}}panel  {{content_mod}}"  id="{{content_id}}">
+	<div class="{{content_prefix}}container container  {{content_mod}}">
+		{% include "../../common/page-header/tpl.twig" with {prefix:"page-header__", mod:heading_mod, group:heading_group, level:heading_level, heading:heading, level_sm:heading_sm_level, heading:heading_sm } %}	
+		<div class="{{content_prefix}}grid-row  grid__row  is--columns-4">
+			{% include "../../common/card/card.twig" with {view: "preview", prefix:"card-item__", mod:"is--portfolio", list: [{"heading":"Lorem ipsum dolor.", "link":page.portfolio_card, "img":"http://via.placeholder.com/400x540"},{"heading":"Lorem ipsum dolor.", "link":page.portfolio_card, "img":"http://via.placeholder.com/400x540"}, {"heading":"Lorem ipsum dolor.", "link":page.portfolio_card, "img":"http://via.placeholder.com/400x540"}, {"heading":"Lorem ipsum dolor.", "link":page.portfolio_card, "img":"http://via.placeholder.com/400x540"}]} %}
+		</div>
+		<div class="{{content_prefix}}btn  {{content_mod}}  is--center">
+			{% include "../../common/button/btn.twig" with {view:"link",prefix:"btn__", link:page.portfolio, name:"Смотреть все работы" } %}
+		</div>
+	</div>
+</div> 

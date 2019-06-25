@@ -1,0 +1,17 @@
+{% if view == "modal" %}
+<button type="button" class="{{prefix}}item  {{mod}}" data-toggle="modal" data-target="#{{target}}" data-modal-heading="{{m_heading}}" data-modal-heading-small="{{m_heading_sm}}" data-btn-heading="{{m_btn}}">
+	<span class="{{prefix}}name">{{name}}</span>
+</button>
+{% endif %}
+
+{% if view == "btn" %}
+<button type="{{type}}" class="{{prefix}}item  {{mod}}" {% if heading_view == "modal" %}data-btn-heading{% endif %}>
+	<span class="{{prefix}}name">{{name}}</span>
+</button>
+{% endif %}
+
+{% if view == "link" %}
+<a href="{{link}}" class="{{prefix}}item  {{mod}}">
+	<span class="{{prefix}}name">{{name}}</span>
+</a>  
+{% endif %}

@@ -1,0 +1,18 @@
+<main class="{{content_prefix}}panel">
+	<div class="{{content_prefix}}container container  is--full  is--default-page">
+		{% include "../../common/page-header/tpl.twig" with {prefix:"page-header__", mod:heading_mod, group:heading_group, level:heading_level, heading:heading, level_sm:heading_sm_level, heading:heading_sm, bread:bread, bread_mod:bread_mod, bread_l1:bread_l1, bread_l1_link:bread_l1_link, bread_l2:bread_l2, bread_l2_link:bread_l2_link } %}
+		<div class="{{content_prefix}}elem  {{content_mod}}">
+			<div class="{{content_prefix}}btn  is--center  is--pt0  {{content_mod}}">
+				{% include "../../common/button/btn.twig" with {view:"link",prefix:"btn__", mod:"scrollto", link:"#form-reviews", name:"Оставить отзыв" } %}
+			</div>		
+		</div>		
+		<div class="{{content_prefix}}elem  {{content_mod}}">		
+			<div class="{{content_prefix}}grid-row  grid__row  {{content_mod}}">	
+				{% include "../../common/card/card.twig" with {view: "reviews", prefix:"card-item__", mod:"is--reviews", list: [{"heading":"Кирилл Афанасьев", "date":"20 сентября 2018г", "date_iso":"2018-03-27", "note":"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quasi atque maxime culpa iste voluptas, vitae autem facere, harum aliquam odit optio dolorem et illo molestiae sed nulla, qui non! Eum voluptatibus praesentium atque veniam quos exercitationem perspiciatis illum fugiat, earum."},{"heading":"Кирилл Афанасьев", "date":"20 сентября 2018г", "date_iso":"2018-03-27", "note":"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quasi atque maxime culpa iste voluptas, vitae autem facere, harum aliquam odit optio dolorem et illo molestiae sed nulla, qui non! Eum voluptatibus praesentium atque veniam quos exercitationem perspiciatis illum fugiat, earum."},{"heading":"Кирилл Афанасьев", "date":"20 сентября 2018г", "date_iso":"2018-03-27", "note":"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quasi atque maxime culpa iste voluptas, vitae autem facere, harum aliquam odit optio dolorem et illo molestiae sed nulla, qui non! Eum voluptatibus praesentium atque veniam quos exercitationem perspiciatis illum fugiat, earum."}]} %}
+			</div>
+		</div>	
+		<div class="{{content_prefix}}elem  {{content_mod}}" id="form-reviews">
+			{% include "../../common/form/form.twig" with {view: "reviews", prefix:"form__", mod:"is--reviews", ID: "f_reviews", heading:"Оставить отзыв", heading_mod:"is--h4", level:"h4", heading_sm_level:"div", heading_sm:"Свяжитесь с нами", bread:null, btn_name:"Отправить" } %}
+		</div>
+	</div>
+</main>

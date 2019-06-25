@@ -1,0 +1,22 @@
+<header class="{{block_prefix}}block">
+	<div class="{{block_prefix}}slick" data-slider-slick="slick-header">
+		<div class="{{block_prefix}}slick-item">
+			<img src="{{path.img}}/temp/header-slider-item1.jpg" class="img-responsive" alt="">
+		</div>
+		<div class="{{block_prefix}}slick-item">
+			<img src="{{path.img}}/temp/header-slider-item2.jpg" class="img-responsive" alt="">
+		</div>
+	</div>
+	<div class="{{block_prefix}}container container">
+		<div class="{{block_prefix}}panel">
+			<div class="{{block_prefix}}inner">
+				<h1 class="{{block_prefix}}heading">{{block_heading}}</h1>
+				<div class="{{block_prefix}}heading-small">{{block_heading_small}}</div>
+				<div class="{{block_prefix}}btn">
+					{% include "../button/btn.twig" with {view:"modal", prefix:"btn__", target:"modal-message", name:block_btn } %}
+				</div>
+			</div>
+		</div>
+	</div>
+	<a href="#adv-block" data-scrollto-diff="-97" class="{{block_prefix}}scrollto scrollto">{% include "../svg-sprite/svg.twig" with {icon:"icon-scroll"} %}</a>
+</header>

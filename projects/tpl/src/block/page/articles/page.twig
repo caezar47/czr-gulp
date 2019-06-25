@@ -1,0 +1,10 @@
+<main class="{{content_prefix}}panel">
+	<div class="{{content_prefix}}container container  is--full">
+		{% include "../../common/page-header/tpl.twig" with {prefix:"page-header__", mod:heading_mod, group:heading_group, level:heading_level, heading:heading, level_sm:heading_sm_level, heading:heading_sm, bread:bread, bread_mod:bread_mod, bread_l1:bread_l1, bread_l1_link:bread_l1_link, bread_l2:bread_l2, bread_l2_link:bread_l2_link } %}	
+		<div class="{{content_prefix}}elem  {{content_mod}}">			
+			<div class="{{content_prefix}}grid-row  grid__row  is--columns-3">
+				{% include "../../common/card/card.twig" with {view: "news", prefix:"card-item__", mod:"is--news", list: [{"heading":"Lorem ipsum dolor.", "link":page.articles_card, "img":"http://via.placeholder.com/500x265", "date":"20 сентября 2018г", "date_iso":"2018-03-27", "note":"Lorem ipsum dolor sit amet."},{"heading":"Lorem ipsum dolor.", "link":page.articles_card, "img":"http://via.placeholder.com/500x265", "date":"20 сентября 2018г", "date_iso":"2018-03-27", "note":"Lorem ipsum dolor sit amet."},{"heading":"Lorem ipsum dolor.", "link":page.articles_card, "img":"http://via.placeholder.com/500x265", "date":"20 сентября 2018г", "date_iso":"2018-03-27", "note":"Lorem ipsum dolor sit amet."},{"heading":"Lorem ipsum dolor.", "link":page.articles_card, "img":"http://via.placeholder.com/500x265", "date":"20 сентября 2018г", "date_iso":"2018-03-27", "note":"Lorem ipsum dolor sit amet."},{"heading":"Lorem ipsum dolor.", "link":page.articles_card, "img":"http://via.placeholder.com/500x265", "date":"20 сентября 2018г", "date_iso":"2018-03-27", "note":"Lorem ipsum dolor sit amet."},{"heading":"Lorem ipsum dolor.", "link":page.articles_card, "img":"http://via.placeholder.com/500x265", "date":"20 сентября 2018г", "date_iso":"2018-03-27", "note":"Lorem ipsum dolor sit amet."}]} %}
+			</div>
+		</div>		
+	</div>
+</main>

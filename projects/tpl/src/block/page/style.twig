@@ -1,0 +1,49 @@
+<main class="{{content_prefix}}panel  {{content_mod}}">
+	<div class="{{content_prefix}}container container  is--full  {{content_mod}}">
+		{% include "../common/page-header/tpl.twig" with {prefix:"page-header__", mod:heading_mod, group:heading_group, level:heading_level, heading:heading, level_sm:heading_sm_level, heading:heading_sm, bread:bread, bread_mod:bread_mod, bread_l1:bread_l1, bread_l1_link:bread_l1_link, bread_l2:bread_l2, bread_l2_link:bread_l2_link } %}			
+		<div class="{{content_prefix}}elem  {{content_mod}}">
+			{% include "../common/text/tpl.twig" with {view: "test", heading: "Тест шрифта"} %}	
+		</div>
+		<div class="{{content_prefix}}elem  {{content_mod}}">
+			{% include "../common/page-header/tpl.twig" with {view: "test", prefix:"page-header__", heading:"Заголовки"} %}	
+		</div>
+		<div class="{{content_prefix}}elem  {{content_mod}}">
+			{% include "../common/color/tpl.twig" with {prefix:content_prefix, heading:"Палитра"} %}	
+		</div>
+		<div class="{{content_prefix}}elem  {{content_mod}}">
+			{% include "../common/button/tpl.twig" with {prefix:content_prefix, heading:"Кнопки и ссылки"} %}	
+		</div>
+		<div class="{{content_prefix}}elem  {{content_mod}}">
+			{% include "../common/button/tpl.twig" with {prefix:content_prefix, heading:"Кнопки и ссылки"} %}	
+		</div>
+		<div class="{{content_prefix}}elem  {{content_mod}}">
+			<h4 class="{{content_prefix}}heading">Вкладки</h4>
+			{% include "../common/tabs/tpl.twig" with {prefix:"tabs__", tabs:"tcard", heading:"Вкладки"} %}	
+		</div>
+		<div class="{{content_prefix}}elem  {{content_mod}}">
+			<h4 class="{{content_prefix}}heading">Формы</h4>
+			{% include "../common/form/tpl.twig" with {prefix:"form__", heading:"Формы"} %}	
+		</div>
+		<div class="{{content_prefix}}elem  {{content_mod}}">
+			<h4 class="{{content_prefix}}heading">Таблицы</h4>
+			{% include "../common/table/tpl.twig" with {prefix:"tables__", heading:"Таблицы"} %}	
+		</div>
+		<div class="{{content_prefix}}elem  {{content_mod}}">
+			<h4 class="{{content_prefix}}heading">Постраничная навигация</h4>
+			{% include "../common/pagination/tpl.twig" with {prefix:"pagination__", list:[{name:"1"},{name:"2"},{name:"3"},{name:"..."},{name:"10"}]} %}	
+		</div>
+		<div class="{{content_prefix}}elem  {{content_mod}}">
+			<h4 class="{{content_prefix}}heading">Хлебные крошки</h4>
+			{% include "../common/breadcrumb/tpl.twig" with {prefix:"breadcrumb__", bread: "Новости"} %}	
+			{% include "../common/breadcrumb/tpl.twig" with {prefix:"breadcrumb__", bread_l1_link: page.articles, bread_l1: "Новости", bread: "Новость 1"} %}	
+			{% include "../common/breadcrumb/tpl.twig" with {prefix:"breadcrumb__", bread_l1_link: page.about, bread_l1: "О компании",bread_l2_link: page.articles, bread_l2: "Новости", bread: "Новость 1"} %}	
+		</div>
+		<div class="{{content_prefix}}elem  {{content_mod}}">
+			<h4 class="{{content_prefix}}heading">Соц. сети</h4>
+			{% include "../common/social/tpl.twig" with {prefix:"social__", list:[{name:"soc-vk", link:soc.vk},{name:"soc-fb", link:soc.fb},{name:"soc-inst", link:soc.inst},{name:"soc-ok", link:soc.ok}]} %}
+		</div>
+	</div>
+	<div class="{{content_prefix}}elem  {{content_mod}}">
+		{% include "../common/form/form.twig" with {view: "call", panel: "block", bg: "/temp/bg-form.jpg", prefix:"form__", mod:"is--block", ID: "f_call", heading:"Заказать обратный звонок", heading_mod:"is--h4", level:"h4", heading_sm_level:"div", heading_sm:"Свяжитесь с нами", bread:null, btn_name:"Отправить", btn_mod:"is--sm" } %}
+	</div>
+</main>

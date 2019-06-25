@@ -1,0 +1,113 @@
+.continfo__{
+	&block{}
+	&row{		
+		align-items: center;
+		margin-top: -15px;
+		margin-left: -15px;
+		margin-right: -15px;
+		@media @media-point-notsmart {
+			justify-content: space-between;
+		}
+		&.is--footer{
+			@media @media-point-device {
+				flex-wrap: wrap;
+			}
+		}
+		&.is--contacts{
+			flex-wrap: wrap;
+		}
+	}
+	&cols{
+		padding-top: 15px;
+		padding-left: 15px;
+		padding-right: 15px;
+		&.is--footer{
+			@media @media-point-sm {
+				.makeCols(4, 12);
+			}
+			@media @media-point-md1 {
+				.makeCols(3.5, 12);
+			}
+			&.is--address{
+				@media @media-point-md1 {
+					.makeCols(5, 12);
+				}
+				@media @media-point-md2 {
+					.makeCols(4, 12);
+				}
+			}
+		}
+		&.is--contacts{
+			.makeCols(12, 12);
+		}
+	}
+	&item{
+		position: relative;
+		padding-left: @continfo_icon_width + 13px;
+		display: inline-block;
+		&, &:focus,&:hover{
+			color: @continfo_color;
+		}
+		&.is--contacts{
+			font-weight: 400;
+			padding-top: 5px;
+			padding-bottom: 5px;
+			margin-bottom: 5px;		
+		}
+		&.is--navbar{			
+			font-size: @b-fs + 6;
+			line-height: @b-lh + 2;
+			white-space: nowrap;
+			@media @media-point-screen-lg {
+				font-size: @b-fs + 2;
+				line-height: @b-lh + 2;	
+			}
+		}
+		&.is--navbar-header{
+			display: block;
+			padding: 0;
+			width: @continfo_icon_width;
+			height: @continfo_icon_width;
+		}
+		&.is--footer{
+			&,
+			a[href^="mailto:"]&,
+			a[href^="mailto:"]&:focus,
+			a[href^="mailto:"]&:hover, 
+			a[href^="tel:"]&, 
+			a[href^="tel:"]&:focus, 
+			a[href^="tel:"]&:hover{
+				color: @white;
+			}
+			@media @media-point-smart {padding-left: 0;}			
+		}
+		&.is--noicon{
+			padding-left: 0;
+		}
+	}
+	&item-icon{
+		position: absolute;
+		left: 0;
+		top: 50%;
+		transform: translateY(-50%);
+		background-color: @continfo_icon_bg;
+		color: @continfo_icon_color;
+		width: @continfo_icon_width;
+		height: @continfo_icon_width;
+		border-width: @continfo_icon_border;
+		border-style: solid;
+		border-color: @continfo_icon_border_color;
+		border-radius: @continfo_icon_radius;
+		padding: @continfo_icon_padding;
+		&.is--footer{
+			@media @media-point-smart { display: none; }
+		}
+		&.is--contacts{
+		}
+		&.is--noicon{
+			display: none;
+		}
+		svg{display: block;}
+	}
+	&item-name{}
+}

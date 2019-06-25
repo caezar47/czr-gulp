@@ -1,0 +1,1 @@
+var topPos=$(document).scrollTop(),snb=$(".navbar__block.is--scroll");snb.hasClass("opacity")?topPos<=200&&snb.removeClass("opacity"):200<topPos&&snb.addClass("opacity"),snb.hasClass("fixed")?topPos<=400&&snb.removeClass("fixed"):400<topPos&&snb.addClass("fixed"),snb.hasClass("scroll-navbar")?topPos<=500&&snb.removeClass("scroll-navbar"):500<topPos&&snb.addClass("scroll-navbar");
