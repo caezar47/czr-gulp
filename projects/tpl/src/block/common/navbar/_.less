@@ -114,7 +114,7 @@
 			@media @media-point-device-lg{
 				height: 100%;
 				overflow: auto;
-				padding: 20px 10px;
+				padding: 20px 15px;
 				position: relative;
 			}
 			@media @media-point-md2 {
@@ -284,10 +284,11 @@
 			.navbar__nav-item.dropdown &{
 				padding-right: 20px;
 				.icon-dropdown();
-				background-position: 0 center;
+				background-position: 100% center;
 				@media @media-point-screen-lg{
 					padding-left: 20px;
 					padding-right: 0;
+					background-position: 0 center;
 				}
 				&:hover{
 					.icon-dropdown(@c: 'f24f00');
