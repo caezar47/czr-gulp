@@ -3,69 +3,8 @@
 var CMS__TPL_PATH = '/wp-content/themes/azbn7theme';
 //var CMS__TPL_PATH = '';
 
-var Azbn7__API__Request = function(method, data, cb) {
-	
+var Azbn7__API__Request = function(data, cb) {	
 	var ctrl = this;
-	
-	//data.method = method || data.method;
-	
-	$.ajax({
-		url : '/api/?method=' + method,
-		type : 'POST',
-		dataType : 'json',
-		data : data,
-		success : cb ? cb : function(d){
-			console.dir(d);
-		},
-		error : function(jqXHR, textStatus, errorThrown){
-			console.dir(arguments);
-		},
-	});
-	
-	return ctrl;
-	
-}
-
-$(function(){
-	
-	$('form.azbn7__api__form').on('submit.azbn7', function(event){
-		event.preventDefault();
-		
-		var form = $(this);
-		var _form = form.clone();
-		
-		var method = form.attr('data-method') || 'formsave';
-		var form_mess = form.attr('data-message') || "#modal-message";
-		
-		new Azbn7__API__Request(method, _form.serialize(), function(resp){
-			
-			_form
-				.trigger('reset')
-				.empty()
-				.remove()
-			;
-			
-			form
-				.trigger('reset')
-			;
-			
-			form
-				.closest('.modal')
-					.modal('hide');
-
-			$(form_mess).modal();	
-			
-		});
-		
-	});
-	
-});
-/*var Azbn7__API__Request = function(data, cb) {
-	
-	var ctrl = this;
-	
-	//data.method = method || data.method;
-	
 	$.ajax({
 		url : '/api/',
 		type : 'POST',
@@ -75,14 +14,10 @@ $(function(){
 		error : function(jqXHR, textStatus, errorThrown){
 			console.warn(textStatus);
 		},
-	});
-	
-	return ctrl;
-	
+	});	
+	return ctrl;	
 }
-
-$(function(){
-	"use strict";	
+$(function(){	
 	$('form.azbn7__api__form')
 		.on('submit', function(event){
 			event.preventDefault();			
@@ -91,8 +26,8 @@ $(function(){
 			event.preventDefault();			
 		if(errorFound) {			
 		} else {			
-			var form = $(this);
-			var _form = form.clone();			
+			var form = $(this);		
+			var _form = form;			
 			var method = form.attr('data-method') || 'formsave';
 			var form_mess = form.attr('data-message') || "#modal-message";
 
@@ -120,9 +55,7 @@ $(function(){
 			});				
 		}			
 	});
-});*/
-
-
+});
 /*
  * Inline Form Validation Engine 2.6.2, jQuery plugin
  *

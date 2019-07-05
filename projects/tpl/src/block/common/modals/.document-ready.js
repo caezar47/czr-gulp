@@ -15,6 +15,6 @@ modal_btn_show.on('click', function(e) {
 
 	modal_heading.text(modal_heading_value);
 	modal_heading_small.text(modal_heading_small_value);
-	modal_form_heading.attr({'name':'f[Форма: '+modal_heading_value+']'});
+	modal_form_heading.attr({'value':modal_heading_value});
 	modal_btn_heading.text(modal_btn_heading_value);
 });
