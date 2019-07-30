@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="ru-RU">
+	<head>	
+    	{% include "../block/email/common/head.twig" with {title:"Poll Email"} %}
+	</head>   
+	<body class="email__body  is--bt">  	
+		<div class="email__panel" style="background-image: url('//orel.fedoperator.ru/var/site/static/img/email/bg-top.png')">
+		    <div class="email__panel-inner" style="background-image: url('//orel.fedoperator.ru/var/site/static/img/email/bg-bottom.png')">  
+    			{% include "../block/email/common/header.twig" with {content_prefix:"email__"} %}
+
+    			{% include "../block/email/page/poll.twig" with {content_prefix:"email__", heading:"Предлагаем вам заполнить эту форму:", heading_small:"Анкета потенциального партнера Федерального Оператора Недвижимости", note:"<p>Добрый день! Мы&nbsp;рады, что&nbsp;Вы рассматриваете нашу компанию в&nbsp;качестве потенциального партнера. Предлагаем для начала поближе познакомиться. Уделите несколько минут на&nbsp;заполнение нашей анкеты.</p><p>С&nbsp;уважением, команда «Федеральный оператор недвижимости»</p>", 		btn_heading:"<p><strong>Для тестового пользования, зарегистрируйтесь<br> в личном кабинете пользователя.</strong></p>", btn:"Заполнить анкету", 		btn_link:"//orel.fedoperator.ru/forms/franchise"} %}
+    			{% include "../block/email/common/footer.twig" with {content_prefix:"email__"} %}
+			</div>
+		</div>
+	</body>
+</html> 

@@ -7,6 +7,7 @@ const less 				= require('gulp-less');
 const plumber 			= require('gulp-plumber');
 const autoprefixer 		= require('gulp-autoprefixer');
 const cleanCSS 			= require('gulp-clean-css');
+const inlineCss 		= require('gulp-inline-css');
 const concat 			= require('gulp-concat');
 const data 				= require('gulp-data');
 const twig 				= require('gulp-twig');
@@ -41,6 +42,7 @@ const path = {
 	src : {
 		root : src,
 		html : src + '/html',
+		email : src + '/email',
 		less : src + '/less',
 		common : src + '/common',
 		js : src + '/js',
@@ -52,6 +54,7 @@ const path = {
 	},
 	block : {
 		root : root + '/src/block',
+		email : root + '/src/block/email',
 	}
 };
 function watching(done){
@@ -63,6 +66,10 @@ function watching(done){
     gulp.watch(path.src.html + "/**/*.twig", html);
     gulp.watch(path.src.block + "/**/*.twig", html);
     gulp.watch(path.src.json + "/**/*.json", html);
+
+    gulp.watch(path.src.email + "/**/*.twig", email);
+    gulp.watch(path.block.email + "/**/*.twig", email);
+    gulp.watch(path.src.json + "/**/*.json", email);
 
     gulp.watch(path.src.img + "/**/*", webpGen);
     gulp.watch(path.src.img + "/**/*", imgGen);
@@ -109,6 +116,25 @@ function html(done){
 	.pipe(browserSync.reload({ stream: true }))  
     done();
 } 
+function email(done){
+	return gulp.src(path.src.email + '/**/*.twig')  
+    .pipe(plumber()) 
+   	.pipe(data(function (file) {
+		return JSON.parse(
+		fs.readFileSync(path.src.json + '/data.twig.json'));
+	}))
+    .pipe(twig())
+	.pipe(inlineCss({
+		applyStyleTags: true,
+		applyLinkTags: true,
+		removeStyleTags: false,
+		removeLinkTags: true,
+	}))
+	.pipe(gulp.dest(path.build.html))
+	.pipe(browserSync.reload({ stream: true }))  
+    done();
+}
+
 function stylesConcat(done){
 	return gulp.src(path.src.block + '/**/*.less')  
     .pipe(plumber())    
@@ -266,4 +292,4 @@ function svg(done){
     done();
 }
 
-gulp.task('default',gulp.series(html, stylesConcat, js, js_plugin, js_bodyon, js_ready, js_resize, js_scroll, js_body_сlass, js_сlass, styles, watching, imgGen, webpGen, svg)); 
+gulp.task('default',gulp.series(html, email, stylesConcat, js, js_plugin, js_bodyon, js_ready, js_resize, js_scroll, js_body_сlass, js_сlass, styles, watching, imgGen, webpGen, svg)); 

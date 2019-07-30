@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "dependencies": {
-    "browserslist": "^4.6.2"
+    "browserslist": "^4.6.2",
+    "gulp-inline-css": "^3.3.2"
   },
   "devDependencies": {
     "browser-sync": "^2.26.7",

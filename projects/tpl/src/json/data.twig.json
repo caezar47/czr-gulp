@@ -48,7 +48,13 @@
 		"btn":"btn__",
 		"link":"link__",
 		"btn-icon":"btn-icon__"
-	},	 
+	},		
+	"email":{
+		"email":"partner@fedoperator.ru",
+		"phone":"+7 (910) 303-04-63",  
+		"phone_tel":"+79103030463",
+		"path_img":"//orel.fedoperator.ru/var/site/static/img"
+	}, 
 	"path":{		                  
 		"css":"/css",
 		"img":"/img",
