@@ -31,7 +31,7 @@ const jData 			= require(root + '/src/json/data.twig.json');
 const fs 				= require('fs');
 
 const path = {
-	build : {
+	build : { 
 		root : build,
 		html : build,
 		css : build + '/css',
