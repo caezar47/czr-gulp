@@ -7,7 +7,8 @@
 						{% include "../svg-sprite/svg.twig" with {icon:"logotip"} %}
 					</a>
 				</div>				
-				{% include "../../common/continfo/tpl.twig" with {prefix:"continfo__", mod:"is--footer"} %} 
+
+				{% include "../../common/continfo/tpl.twig" with {view: "footer", prefix:"continfo__", group_prefix:footer_prefix, mod:"is--footer", list:[{"mod":"","name":contacts.address, "icon":"contacts-address", "tag":"div"},{"mod":"is--email","name":contacts.email, "href":contacts.email, "icon":"contacts-email", "tag":"a", "target":"mailto:"},{"mod":"is--tel","name":contacts.phone, "href":contacts.phone_tel, "icon":"contacts-tel", "tag":"a", "target":"tel:"}]} %} 
 			</div>	
 		</div>
 	</div>

@@ -12,12 +12,12 @@ $(document.body).on('click.fecss.scrollto', '.scrollto', {}, function(event){
 	$('html, body').animate({
 		scrollTop: (el.offset().top + diff)
 	}, speed);
-	$(".navbar__nav .navbar__nav-item").removeClass("is--active");
-	btn.parent().addClass("is--active");
+	$('[data-scrollto="nav-item"]').removeClass("is--active");
+	btn.parent().addClass("is--active"); 
 });	
-$(document.body).on('click', '.navbar__collapse.is--open .navbar__nav-link.scrollto', {}, function(event){	
+$(document.body).on('click', '[data-scrollto="navbar"].is--open .scrollto', {}, function(event){	
 	if(screenJS.isXS() || screenJS.isSM() || screenJS.isMD()) {
 		event.preventDefault();		
-		$('.navbar__hamburger-btn').trigger('click');
+		$('[data-scrollto="humb"]').trigger('click');
 	}	
 });

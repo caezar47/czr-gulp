@@ -49,7 +49,7 @@ $(function(){
 					.trigger('reset')
 				;				
 				form
-					.closest('.modal')
+					.closest('.modals')
 						.modal('hide');									
 				$(form_mess).modal();					
 			});				

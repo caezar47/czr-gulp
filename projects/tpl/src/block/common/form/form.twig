@@ -1,7 +1,7 @@
 <div class="{{prefix}}block  {{mod}}" {% if panel=="block" %}style="background-image: url({{path.img}}{{bg}})"{% endif %}>
 	{% if panel=="block" %}<div class="{{prefix}}container container  {{mod}}"  >{% endif %}
 	{% include "../../common/page-header/tpl.twig" with {heading_view:heading_view, prefix:"page-header__", mod:heading_mod, group:heading_group, level:heading_level, heading:heading, level_sm:heading_sm_level, heading_sm:heading_sm} %}
-	<form action="#" class="{{prefix}}panel  {{mod}}" data-form-validation>
+	<form action="#" class="{{prefix}}panel  {{mod}}  azbn7__api__form" data-form-validation>
 		<input type="hidden" name="key" value="londonisthecapitalofgreatbritain">
 		<input type="hidden" name="f[Форма: {{heading}}]" {% if heading_view == "modal" %}data-form-heading{% endif %}>
 		<div class="{{prefix}}grid-row  grid__row  {{mod}}">

@@ -1,44 +1,11 @@
 .continfo__{
 	&block{}
-	&row{		
-		align-items: center;
-		margin-top: -15px;
-		margin-left: -15px;
-		margin-right: -15px;
-		@media @media-point-notsmart {
-			justify-content: space-between;
-		}
-		&.is--footer{
-			@media @media-point-device {
-				flex-wrap: wrap;
-			}
-		}
+	&card{
 		&.is--contacts{
-			flex-wrap: wrap;
-		}
-	}
-	&cols{
-		padding-top: 15px;
-		padding-left: 15px;
-		padding-right: 15px;
-		&.is--footer{
-			@media @media-point-sm {
-				.makeCols(4, 12);
+			margin-bottom: 30px;
+			&:last-child{
+				margin-bottom: 0;
 			}
-			@media @media-point-md1 {
-				.makeCols(3.5, 12);
-			}
-			&.is--address{
-				@media @media-point-md1 {
-					.makeCols(5, 12);
-				}
-				@media @media-point-md2 {
-					.makeCols(4, 12);
-				}
-			}
-		}
-		&.is--contacts{
-			.makeCols(12, 12);
 		}
 	}
 	&item{

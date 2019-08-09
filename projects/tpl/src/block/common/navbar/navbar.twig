@@ -1,10 +1,10 @@
-<nav class="{{navbar_prefix}}block  {{navbar_mod}}" data-scrollto="navbar">
+<nav class="{{navbar_prefix}}block  {{navbar_mod}}" {% if view == "scroll" %}data-scrollto="navbar"{% endif %}>
 	<div class="{{navbar_prefix}}header">
 		<div class="{{navbar_prefix}}container container  is--header">
 			<div class="{{navbar_prefix}}header-row row ">
 				<div class="{{navbar_prefix}}header-cols cols  is--hamburger">
 					<div class="{{navbar_prefix}}hamburger">
-						<button class="{{navbar_prefix}}hamburger-card" data-scrollto="humb" data-toggle="collapse" data-target="#bs-navbar-collapse" aria-expanded="false" data-toggle-nav=".navbar-site" data-body="html" data-collapse-nav=".navbar__collapse">
+						<button class="{{navbar_prefix}}hamburger-card" {% if view == "scroll" %}data-scrollto="humb"{% endif %} data-toggle="collapse" data-target="#bs-navbar-collapse" aria-expanded="false" data-toggle-nav=".navbar__block" data-body="html" data-collapse-nav=".navbar__collapse">
 							<span class="{{navbar_prefix}}hamburger-card-inner">
 								<span class="{{navbar_prefix}}hamburger-card-line  is--left"></span>
 								<span class="{{navbar_prefix}}hamburger-card-line  is--center"></span>

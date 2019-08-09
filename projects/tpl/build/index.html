@@ -21,13 +21,13 @@
 
 <link href="/css/style.css" rel="stylesheet">	</head>
 	<body class="is--index-page">
-    	<nav class="navbar__block  is--scroll  is--index" data-scrollto="navbar">
+    	<nav class="navbar__block  is--scroll  is--index" >
 	<div class="navbar__header">
 		<div class="navbar__container container  is--header">
 			<div class="navbar__header-row row ">
 				<div class="navbar__header-cols cols  is--hamburger">
 					<div class="navbar__hamburger">
-						<button class="navbar__hamburger-card" data-scrollto="humb" data-toggle="collapse" data-target="#bs-navbar-collapse" aria-expanded="false" data-toggle-nav=".navbar-site" data-body="html" data-collapse-nav=".navbar__collapse">
+						<button class="navbar__hamburger-card"  data-toggle="collapse" data-target="#bs-navbar-collapse" aria-expanded="false" data-toggle-nav=".navbar__block" data-body="html" data-collapse-nav=".navbar__collapse">
 							<span class="navbar__hamburger-card-inner">
 								<span class="navbar__hamburger-card-line  is--left"></span>
 								<span class="navbar__hamburger-card-line  is--center"></span>
@@ -90,23 +90,23 @@
 		</div>
 	</div>
 </nav>
-    	<header class="block">
-	<div class="slick" data-slider-slick="slick-header">
-		<div class="slick-item">
+        <header class="header-block__block">
+	<div class="header-block__slick" data-slider-slick="slick-header">
+		<div class="header-block__slick-item">
 			<img src="/img/temp/header-slider-item1.jpg" class="img-responsive" alt="">
 		</div>
-		<div class="slick-item">
+		<div class="header-block__slick-item">
 			<img src="/img/temp/header-slider-item2.jpg" class="img-responsive" alt="">
 		</div>
 	</div>
-	<div class="container container">
-		<div class="panel">
-			<div class="inner">
-				<h1 class="heading"></h1>
-				<div class="heading-small"></div>
-				<div class="btn">
+	<div class="header-block__container container">
+		<div class="header-block__panel">
+			<div class="header-block__inner">
+				<h1 class="header-block__heading">Heading</h1>
+				<div class="header-block__heading-small">Heading small</div>
+				<div class="header-block__btn">
 					<button type="button" class="btn__item  " data-toggle="modal" data-target="#modal-message" data-modal-heading="" data-modal-heading-small="" data-btn-heading="">
-	<span class="btn__name"></span>
+	<span class="btn__name">Button</span>
 </button>
 
 
@@ -114,11 +114,10 @@
 			</div>
 		</div>
 	</div>
-	<a href="#adv-block" data-scrollto-diff="-97" class="scrollto scrollto"><svg class="icon-svg icon-icon-scroll" role="img">
+	<a href="#adv-block" data-scrollto-diff="-97" class="header-block__scrollto scrollto"><svg class="icon-svg icon-icon-scroll" role="img">
 	<use xlink:href="/img/svg/sprite.svg#icon-scroll"></use>
 </svg></a>
 </header> 
-
     	<div class="content-block__panel  is--index-adv"  id="adv-block">
 	<div class="content-block__container container  is--index-adv">
 		<div class="grid__row  is--columns-2">
@@ -355,32 +354,35 @@
 	<use xlink:href="/img/svg/sprite.svg#logotip"></use>
 </svg>					</a>
 				</div>				
-						<div class="continfo__cols cols  is--address  is--footer">
-			<div class="continfo__item   is--footer">
+
+				<div class="continfo__card  footer__cols cols is--footer  "> 
+	<div  class="continfo__item  is--footer">
 				<span class="continfo__item-icon  is--footer">
-				<svg class="icon-svg icon-contacts-address" role="img">
+		<svg class="icon-svg icon-contacts-address" role="img">
 	<use xlink:href="/img/svg/sprite.svg#contacts-address"></use>
 </svg></span>
 				<span class="continfo__item-name  is--footer">г. Орёл, Сквер им. Сталина</span>
-			</div>
-		</div>
-		<div class="continfo__cols cols  is--footer">
-			<a href="mailto:email@email.ru" class="continfo__item   is--footer">
-				<span class="continfo__item-icon  is--footer"><svg class="icon-svg icon-contacts-email" role="img">
+	</div>
+</div>
+<div class="continfo__card  footer__cols cols is--footer  is--email"> 
+	<a href="mailto:email@email.ru" class="continfo__item  is--footer">
+				<span class="continfo__item-icon  is--footer">
+		<svg class="icon-svg icon-contacts-email" role="img">
 	<use xlink:href="/img/svg/sprite.svg#contacts-email"></use>
 </svg></span>
 				<span class="continfo__item-name  is--footer">email@email.ru</span>
-			</a>
-		</div>
-		<div class="continfo__cols cols  is--footer">
-			<a href="tel:+70123456789" class="continfo__item   is--footer">
-				<span class="continfo__item-icon  is--footer"><svg class="icon-svg icon-contacts-tel" role="img">
+	</a>
+</div>
+<div class="continfo__card  footer__cols cols is--footer  is--tel"> 
+	<a href="tel:+70123456789" class="continfo__item  is--footer">
+				<span class="continfo__item-icon  is--footer">
+		<svg class="icon-svg icon-contacts-tel" role="img">
 	<use xlink:href="/img/svg/sprite.svg#contacts-tel"></use>
 </svg></span>
 				<span class="continfo__item-name  is--footer">+7 (012) 345-67-89</span>
-			</a>
-		</div>
- 
+	</a>
+</div>
+  
 			</div>	
 		</div>
 	</div>
@@ -423,7 +425,7 @@
 					
 	</div>
 </div>
-	<form action="#" class="form__panel  " data-form-validation>
+	<form action="#" class="form__panel    azbn7__api__form" data-form-validation>
 		<input type="hidden" name="key" value="londonisthecapitalofgreatbritain">
 		<input type="hidden" name="f[Форма: Ваше сообщение успешно отправлено!]" data-form-heading>
 		<div class="form__grid-row  grid__row  ">

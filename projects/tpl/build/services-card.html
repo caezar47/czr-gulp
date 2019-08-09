@@ -21,13 +21,13 @@
 
 <link href="/css/style.css" rel="stylesheet">	</head>
 	<body>
-    	<nav class="navbar__block  is--scroll" data-scrollto="navbar">
+    	<nav class="navbar__block  is--scroll" >
 	<div class="navbar__header">
 		<div class="navbar__container container  is--header">
 			<div class="navbar__header-row row ">
 				<div class="navbar__header-cols cols  is--hamburger">
 					<div class="navbar__hamburger">
-						<button class="navbar__hamburger-card" data-scrollto="humb" data-toggle="collapse" data-target="#bs-navbar-collapse" aria-expanded="false" data-toggle-nav=".navbar-site" data-body="html" data-collapse-nav=".navbar__collapse">
+						<button class="navbar__hamburger-card"  data-toggle="collapse" data-target="#bs-navbar-collapse" aria-expanded="false" data-toggle-nav=".navbar__block" data-body="html" data-collapse-nav=".navbar__collapse">
 							<span class="navbar__hamburger-card-inner">
 								<span class="navbar__hamburger-card-line  is--left"></span>
 								<span class="navbar__hamburger-card-line  is--center"></span>
@@ -250,32 +250,35 @@
 	<use xlink:href="/img/svg/sprite.svg#logotip"></use>
 </svg>					</a>
 				</div>				
-						<div class="continfo__cols cols  is--address  is--footer">
-			<div class="continfo__item   is--footer">
+
+				<div class="continfo__card  footer__cols cols is--footer  "> 
+	<div  class="continfo__item  is--footer">
 				<span class="continfo__item-icon  is--footer">
-				<svg class="icon-svg icon-contacts-address" role="img">
+		<svg class="icon-svg icon-contacts-address" role="img">
 	<use xlink:href="/img/svg/sprite.svg#contacts-address"></use>
 </svg></span>
 				<span class="continfo__item-name  is--footer">г. Орёл, Сквер им. Сталина</span>
-			</div>
-		</div>
-		<div class="continfo__cols cols  is--footer">
-			<a href="mailto:email@email.ru" class="continfo__item   is--footer">
-				<span class="continfo__item-icon  is--footer"><svg class="icon-svg icon-contacts-email" role="img">
+	</div>
+</div>
+<div class="continfo__card  footer__cols cols is--footer  is--email"> 
+	<a href="mailto:email@email.ru" class="continfo__item  is--footer">
+				<span class="continfo__item-icon  is--footer">
+		<svg class="icon-svg icon-contacts-email" role="img">
 	<use xlink:href="/img/svg/sprite.svg#contacts-email"></use>
 </svg></span>
 				<span class="continfo__item-name  is--footer">email@email.ru</span>
-			</a>
-		</div>
-		<div class="continfo__cols cols  is--footer">
-			<a href="tel:+70123456789" class="continfo__item   is--footer">
-				<span class="continfo__item-icon  is--footer"><svg class="icon-svg icon-contacts-tel" role="img">
+	</a>
+</div>
+<div class="continfo__card  footer__cols cols is--footer  is--tel"> 
+	<a href="tel:+70123456789" class="continfo__item  is--footer">
+				<span class="continfo__item-icon  is--footer">
+		<svg class="icon-svg icon-contacts-tel" role="img">
 	<use xlink:href="/img/svg/sprite.svg#contacts-tel"></use>
 </svg></span>
 				<span class="continfo__item-name  is--footer">+7 (012) 345-67-89</span>
-			</a>
-		</div>
- 
+	</a>
+</div>
+  
 			</div>	
 		</div>
 	</div>
@@ -318,7 +321,7 @@
 					
 	</div>
 </div>
-	<form action="#" class="form__panel  " data-form-validation>
+	<form action="#" class="form__panel    azbn7__api__form" data-form-validation>
 		<input type="hidden" name="key" value="londonisthecapitalofgreatbritain">
 		<input type="hidden" name="f[Форма: Ваше сообщение успешно отправлено!]" data-form-heading>
 		<div class="form__grid-row  grid__row  ">

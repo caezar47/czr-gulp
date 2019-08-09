@@ -1,27 +1,11 @@
-{% if mod != "is--footer" %}
-<div class="{{prefix}}block">
-	<div class="{{prefix}}row row  {{mod}}">
-{% endif %}
-		<div class="{{prefix}}cols cols  is--address  {{mod}}">
-			<div class="{{prefix}}item   {{mod}}">
-				<span class="{{prefix}}item-icon  {{mod}}">
-				{% include "../svg-sprite/svg.twig" with {icon:"contacts-address"} %}</span>
-				<span class="{{prefix}}item-name  {{mod}}">{{contacts.address}}</span>
-			</div>
-		</div>
-		<div class="{{prefix}}cols cols  {{mod}}">
-			<a href="mailto:{{contacts.email}}" class="{{prefix}}item   {{mod}}">
-				<span class="{{prefix}}item-icon  {{mod}}">{% include "../svg-sprite/svg.twig" with {icon:"contacts-email"} %}</span>
-				<span class="{{prefix}}item-name  {{mod}}">{{contacts.email}}</span>
-			</a>
-		</div>
-		<div class="{{prefix}}cols cols  {{mod}}">
-			<a href="tel:{{contacts.phone_tel}}" class="{{prefix}}item   {{mod}}">
-				<span class="{{prefix}}item-icon  {{mod}}">{% include "../svg-sprite/svg.twig" with {icon:"contacts-tel"} %}</span>
-				<span class="{{prefix}}item-name  {{mod}}">{{contacts.phone}}</span>
-			</a>
-		</div>
-{% if mod != "is--footer" %}
-	</div>
+{% for value in list %}
+<div class="{{prefix}}card  {% if view == "footer" %}{{group_prefix}}cols cols{% endif %} {{mod}}  {{value.mod}}"> 
+	<{{value.tag}} {% if value.href != null %}href="{{value.target}}{{value.href}}"{% endif %} class="{{prefix}}item  {{mod}}">
+		{% if value.icon != null %}
+		<span class="{{prefix}}item-icon  {{mod}}">
+		{% include "../svg-sprite/svg.twig" with {icon:value.icon} %}</span>
+		{% endif %}
+		<span class="{{prefix}}item-name  {{mod}}">{{value.name}}</span>
+	</{{value.tag}}>
 </div>
-{% endif %}
+{% endfor %} 

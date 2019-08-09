@@ -6,8 +6,8 @@
 	<body class="is--index-page">
     	{% include "../block/common/navbar/navbar.twig" with {navbar_prefix:"navbar__", navbar_mod:"is--scroll  is--index"} %}
 
-    	{% include "../block/common/header/panel.twig" with {block_prefix:"header-block__", block_heading:"Heading", block_heading_small:"Heading small", block_btn:"Button", block_bg: [path.img,"/temp/bg-index-header.jpg"].join("") %} 
-
+        {% include "../block/common/header/tpl.twig" with {content_prefix:"header-block__", heading:"Heading", heading_small:"Heading small", btn:"Button", bg:[path.img,"/temp/bg-index-header.jpg"].join("")} %}
+ 
     	{% include "../block/page/index/adv.twig" with {content_prefix:"content-block__", content_mod:"is--index-adv", content_id:"adv-block"} %} 
 
     	{% include "../block/page/services/index.twig" with {content_prefix:"content-block__", content_mod:"is--services-index", content_id:"services-block", heading_group:"", heading_mod:"is--ff-2  is--h1", heading_level:"h2", heading:"Наши услуги"} %}
