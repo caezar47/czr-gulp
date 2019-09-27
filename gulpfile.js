@@ -9,6 +9,8 @@ const autoprefixer 		= require('gulp-autoprefixer');
 const cleanCSS 			= require('gulp-clean-css');
 const inlineCss 		= require('gulp-inline-css');
 const concat 			= require('gulp-concat');
+const purgecss 			= require('gulp-purgecss');
+const rename 			= require('gulp-rename');
 const data 				= require('gulp-data');
 const twig 				= require('gulp-twig');
 const pageBuilder 		= require('gulp-pagebuilder2');
@@ -149,7 +151,20 @@ function styles(done){
     .pipe(autoprefixer())
     .pipe(cleanCSS())
     .pipe(gulp.dest(path.build.css))
-	.pipe(browserSync.reload({ stream: true }));    
+	.pipe(browserSync.reload({ stream: true }))
+
+	/*.pipe(
+      purgecss({
+        css: [path.build.css+'/style.css'],
+        content: [path.build.html+'/*.html']
+      })
+    )
+	.pipe(
+      rename({
+        suffix: '-purge'
+      })
+    )
+    .pipe(gulp.dest(path.build.css))*/
     done();
 }
 
