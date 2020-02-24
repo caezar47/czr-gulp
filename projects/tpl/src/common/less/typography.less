@@ -2,7 +2,6 @@ body {
 	font-family: @b-ff;	
 	font-size: @b-fs;
 	line-height: @b-lh;
-	font-weight: 300;
 }
 h1, h2, h3, h4, h5, h6{
 	margin: 0 0 10px;
@@ -11,27 +10,22 @@ h1, h2, h3, h4, h5, h6{
 //p{margin: 0 0 10px;}
 i, em{font-style: italic;}
 b, strong{font-weight: 700;}
-.page_header(){
-	font-family: @page_header_ff;
-	color: @page_header_color;
-}
-
-h1{
+h1, .is--h1{
 	.heading1();	
 }
-h2{
+h2, .is--h2{
 	.heading2();
 }
-h3{	
+h3, .is--h3{	
 	.heading3();
 }
-h4{
+h4, .is--h4{
 	.heading4();
 }
-h5{
+h5, .is--h5{
 	.heading5();
 }
-h6{
+h6, .is--h6{
 	.heading6();
 }
 ol{
@@ -47,6 +41,9 @@ ul{
 		}
 	}
 }
+.font-family--custom{
+	font-family: @b-ff-2;
+}
 .align--{
 	&left{
 		text-align: left;
@@ -56,11 +53,6 @@ ul{
 	}
 	&center{
 		text-align: center;
-	}
-	&center-notsmart{
-		@media @media-point-notsmart {
-			text-align: center;
-		}
 	}
 }
 .justify--{
@@ -75,10 +67,5 @@ ul{
 	}
 	&between{
 		justify-content: space-between;
-	}
-	&center-notsmart{
-		@media @media-point-notsmart {
-			justify-content: center;
-		}
 	}
 }

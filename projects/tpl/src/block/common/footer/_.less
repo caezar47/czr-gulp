@@ -30,26 +30,23 @@
 			color: @footer_color;
 		}
 	}
-	&container{
-		@media @media-point-device-lg {
-			width: 100%;
-		}
-	}
 	&row{
 		justify-content: space-between;
 		align-items: center;
 		margin-top: -15px;
-		@media @media-point-device{flex-wrap: wrap;}
+		.media-breakpoint-down(@lg; {
+			flex-wrap: wrap;
+		});
 	}
 	&cols{
 		padding-top: 15px;
-		@media @media-point-xxs {
+		.media-breakpoint-down(@sm; {
 			.makeCols(12, 12);
-		}
+		});
 		&.is--copyright{
-			@media @media-point-device {
-				display: none; 
-			}
+			.media-breakpoint-down(@lg; {
+				display: none;
+			});
 		}
 	}
 	&logotip{

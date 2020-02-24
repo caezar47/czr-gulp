@@ -18,10 +18,9 @@
 		//border-width: 3px;
 		//border-style: solid;
 		//border-color: @btn_border_color;
-		@media @media-point-screen {
+		.media-breakpoint-up(@lg; {
 			padding: 20px 3vw;
-		}
-		span{}
+		});
 		&:hover{			
 			color: @btn_hover_color;
 			background-color: @btn_hover_bg_color;
@@ -48,31 +47,31 @@
 			}
 		}	
 		&.is--block{
-			@media @media-point-screen {
+			.media-breakpoint-up(@lg; {
 				width: 100%;
-			}
+			});
 		}	
 		&.is--xl{
-			@media @media-point-screen {
+			.media-breakpoint-up(@lg; {
 				padding: 25px 3.2vw;
-			}
+			});
 		}
 		&.is--lg{
-			@media @media-point-screen {
+			.media-breakpoint-up(@lg; {
 				padding: 15px 3vw;
-			}
+			});
 		}	
 		&.is--sm{
-			@media @media-point-screen {
+			.media-breakpoint-up(@lg; {
 				padding: 12px 1.5vw;
-			}
+			});
 		}	
 		&.is--xs{
 			font-size: @btn_fs - 2;
 			line-height: @btn_lh - 2;
-			@media @media-point-screen {
+			.media-breakpoint-up(@lg; {
 				padding: 8px 1vw;
-			}
+			});
 		}
 	}
 }

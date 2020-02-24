@@ -12,7 +12,9 @@
 		}
 		ol, ul, .table{
 			margin-bottom: 20px;
-			@media @media-point-screen {margin-bottom: 25px;}
+			.media-breakpoint-up(@lg; {
+				margin-bottom: 25px;
+			});
 		}
 		h2, h3, h4, h5{
 			margin-bottom: 15px;
@@ -92,32 +94,6 @@
 			& + blockquote{
 				margin-top: 30px;
 			}
-			@media @media-point-screen {				
-				& + h4{padding-top: 30px;}
-			}
-		}	
-		& > *{
-			&.img--left{ 
-				@media @media-point-notsmart {
-					float: left;
-					padding: 0px 20px 0px 0;
-				}
-			}
-			&.img--right{ 
-				@media @media-point-notsmart {
-					float: right;
-					padding: 0px 0px 0 20px ;
-				}
-			}
-			&.img-block--right{
-				img{margin-left: auto }
-			}
-		}		
-		.is--cost{
-			.calcFontSize(20, 23, 320, 1680);
-			.calcLineHeight(22, 26, 320, 1680);
-			color: @b-color;
-			font-weight: 500;			
 		}
 		.table-responsive{
 			padding-top: 0px;

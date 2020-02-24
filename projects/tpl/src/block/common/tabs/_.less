@@ -2,9 +2,9 @@
 	@gutter: 15px;
 	&panel{
 		margin-bottom: 30px;
-		@media @media-point-screen {
+		.media-breakpoint-up(@lg; {
 			margin-bottom: 2.1vw;
-		}
+		});
 	}
 	&nav{
 		list-style: none;
@@ -28,7 +28,9 @@
 		border-style: solid;
 		border-color: @tabs_border_color;
 		&.dropdown-toggle{}
-		@media @media-point-screen {display: block;}
+		.media-breakpoint-up(@lg; {
+			display: block;
+		});
 		span{
 			position: relative;
 			z-index: 2;			

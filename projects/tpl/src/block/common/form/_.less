@@ -15,7 +15,7 @@
 	}
 	&grid-row{
 		&.is--block{
-			@media @media-point-notsmart {
+			.media-breakpoint-up(@md; {
 				grid-template-columns: repeat(12, 1fr); 
 				align-items: center;
 				& > .grid__cols{
@@ -27,11 +27,11 @@
 						order: 1;
 						grid-column: span 12;
 					}
-				}  
-			}
+				}
+			});
 		}
 		&.is--reviews{
-			@media @media-point-notsmart {
+			.media-breakpoint-up(@md; {
 				grid-template-columns: repeat(12, 1fr); 
 				align-items: center;
 				& > .grid__cols{
@@ -46,7 +46,7 @@
 						grid-column: span 8;
 					}
 				}  
-			}
+			});
 		}
 	}
 	&row{
@@ -66,7 +66,7 @@
 		}
 		&.is--reviews{
 			padding-top: 30px;
-			@media @media-point-notsmart {
+			.media-breakpoint-up(@md; {
 				&.is--name,
 				&.is--tel{
 					.makeCols(6, 12);
@@ -78,11 +78,11 @@
 				&.is--btn{
 					text-align: left;
 					.makeCols(4, 12);
-				}
-			}
+				}  
+			});
 		}
 		&.is--block{
-			@media @media-point-screen {
+			.media-breakpoint-up(@lg; {
 				.makeCols(4, 12);
 				&.is--agreement{
 					order: 1;
@@ -94,11 +94,11 @@
 					.makeCols(12, 12);
 					text-align: center;	
 					padding-top: 10px;
-				}
-			}
+				} 
+			});
 		}
 		&.is--search{
-			@media @media-point-notsmart {
+			.media-breakpoint-up(@md; {
 				&.is--name{
 					.makeCols(5, 12);
 				}
@@ -107,8 +107,8 @@
 				}
 				&.is--select-btn{
 					.makeCols(4, 12);
-				}
-			}
+				} 
+			});
 		}
 	}
 	&item{

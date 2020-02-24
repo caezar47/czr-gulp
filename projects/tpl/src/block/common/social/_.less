@@ -18,10 +18,10 @@
 		//border: 2px solid @soc_border;
 		//border-radius: @soc_border_radius;
 		//padding: 6px;
-		@media @media-point-screen-lg {
+		.media-breakpoint-up(@xl; {
 			width: @soc_size - 8;
 			height: @soc_size - 8;
-		}
+		});
 		&, &:focus{color: @soc_color;} 
 		svg{display: block;}
 		&.is--footer{

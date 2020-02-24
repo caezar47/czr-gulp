@@ -25,10 +25,10 @@
 			font-size: @b-fs + 6;
 			line-height: @b-lh + 2;
 			white-space: nowrap;
-			@media @media-point-screen-lg {
+			.media-breakpoint-up(@xl; {
 				font-size: @b-fs + 2;
 				line-height: @b-lh + 2;	
-			}
+			});
 		}
 		&.is--navbar-header{
 			display: block;
@@ -46,7 +46,9 @@
 			a[href^="tel:"]&:hover{
 				color: @white;
 			}
-			@media @media-point-smart {padding-left: 0;}			
+			.media-breakpoint-down(@md; {
+				padding-left: 0;
+			});		
 		}
 		&.is--noicon{
 			padding-left: 0;
@@ -67,7 +69,9 @@
 		border-radius: @continfo_icon_radius;
 		padding: @continfo_icon_padding;
 		&.is--footer{
-			@media @media-point-smart { display: none; }
+			.media-breakpoint-down(@md; {
+				display: none;
+			});
 		}
 		&.is--contacts{
 		}

@@ -1,4 +1,15 @@
 //===== media point =====//
+.media-breakpoint-up(@screen; @rules){
+	@media (min-width: @screen){
+		@rules();
+	}
+}
+.media-breakpoint-down(@screen; @rules){
+	@media (max-width: @screen - 0.02){
+		@rules();
+	}
+}
+//===== media point =====//
 @media-point-xxs: ~"(max-width: 565px)";
 @media-point-xxs-l: ~"(max-width: 565px) and (orientation:landscape)";
 @media-point-xs: ~"(min-width: 567px) and (max-width: 767px)";
@@ -33,8 +44,6 @@
 .heading1(){
 	.calcFontSize(30, 56, 320, 1680);
 	.calcLineHeight(34, 60, 320, 1680);
-	font-family: @b-ff-2;
-	color: @b-color-h;
 }
 .heading2(){
 	.calcFontSize(28, 46, 320, 1680);
@@ -85,6 +94,30 @@
 	@percentage: percentage((@columns / @grid-columns ));
     margin-right: ~"calc(@{percentage})";
 }
+
+.margin_generator(@i: 1) when (@i <= length(@margin_map)) {
+	@item: extract(@margin_map, @i);
+	@name: extract(@item, 1);
+	@mb_lg: extract(@item, 2);
+	@mb_xs: extract(@item, 3);
+
+	.margin--@{name} {
+		margin-bottom: @mb_xs;
+		.media-breakpoint-up(@lg; {
+			margin-bottom: @mb_lg;
+		});
+	}
+	.margin_generator((@i + 1));
+}
+.font_weight_generator(@i: 1) when (@i <= length(@fw_map)) {
+	@item: extract(@fw_map, @i);
+	@name: extract(@item, 2);
+
+	.fw--@{name} {
+		font-weight: @name;
+	}
+	.font_weight_generator((@i + 1));
+}
 //===== btn clearfix =====//
 .btn-clearfix(){
 	outline: none;
@@ -106,55 +139,4 @@
 	height: 1px;
 	margin: -1px;
 	clip: rect(0 0 0 0);
-}
-//===== azbn =====//
-#site {
-	.bi(@img:'') {
-		background-image:url('@{url-path-img}/@{img}');
-	}
-	.bg(@color:#ffffff) {
-		background-color:@color;
-	}
-	.bpos(@pos:center center) {
-		background-position:@pos;
-	}
-	.brep(@rep:no-repeat) {
-		background-repeat:@rep;
-	}
-	.bsize(@s:initial) {
-		background-size:@s;
-	}
-	.color(@color:#ffffff) {
-		color:@color;
-	}
-	.underline(@val:underline) {
-		text-decoration:@val;
-	}
-	.uppercase(@val:uppercase) {
-		text-transform:@val;
-	}
-	.size(@val:10px) {
-		font-size:@val;
-	}
-	.bold(@val:bold) {
-		font-weight:@val;
-	}
-	.italic(@val:italic) {
-		font-style:@val;
-	}
-	.z(@val:1) {
-		z-index:@val;
-	}
-	.lh(@val:1em) {
-		line-height:@val;
-	}
-	.ff(@val:Arial) {
-		font-family:@val;
-	}
-	.w(@val:0px) {
-		width:@val;
-	}
-	.h(@val:0px) {
-		height:@val;
-	}
 }

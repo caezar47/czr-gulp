@@ -7,13 +7,13 @@
 		background-repeat: no-repeat;
 		padding-top: 20px;
 		padding-bottom: 20px;
-		@media @media-point-screen-lg {
+		.media-breakpoint-up(@xl; {
 			padding-top: @navbar_screen;
 			padding-bottom: @navbar_screen;
 			background-attachment: fixed;
 			max-height: 960px;
-			height: 100vh;
-		}
+			height: 100vh;			
+		});
 	}
 	&slick{
 		position: absolute!important;
@@ -28,9 +28,7 @@
 			height: 100%;
 		}
 		img{
-			width: 100%;
-			height: 100%;
-			object-fit: cover;
+			.img-fit();
 		}
 	}
 	&container{
@@ -39,14 +37,12 @@
 		height: 100%;
 	}
 	&panel{
-		//padding-top: 250px;
 		position: relative;
 		padding: 30px;
 		display: flex;
 		justify-content: center;
 		align-items: center;
-		//background-color: fadeout(@white, 40%);
-		@media @media-point-screen-lg {	
+		.media-breakpoint-up(@xl; {
 			position: absolute;
 			top: 53%;
 			left: 15px;
@@ -55,7 +51,7 @@
 			//top: 320px;
 			padding-top: 4.2vw;
 			padding-bottom: 4.2vw;
-		}
+		});
 	}
 	&inner{
 		
@@ -68,24 +64,22 @@
 		.calcLineHeight(30, 38, 320, 767);
 		font-weight: 400;
 		margin-bottom: 10px;
-		span{
-		}
-		@media @media-point-notsmart {
+		.media-breakpoint-up(@md; {
 			.calcFontSize(38, 60, 768, 1680);
 			.calcLineHeight(38, 60, 768, 1680);
-		}
+		});
 	}
 	&heading-small{
 		text-align: center;
 		.heading4();
 		margin-bottom: 35px;
 		color: @white;
-		@media @media-point-smart {
-			br{display: none;}
-		}	
-		@media @media-point-screen-lg {
-			margin-bottom: 1.8vw;
-		}
+		.media-breakpoint-down(@md; {
+			br{display: none;}			
+		});
+		.media-breakpoint-up(@xl; {
+			margin-bottom: 1.8vw;			
+		});	
 	}
 	&btn{ 
 		text-align: center;
@@ -95,7 +89,7 @@
 	}
 	&scrollto{
 		display: none;
-		@media @media-point-screen-lg {
+		.media-breakpoint-up(@xl; {
 			display: block;
 			position: absolute;
 			z-index: 3;
@@ -108,8 +102,8 @@
 			animation: scroll 1.5s infinite ease-in-out;
 			&:hover{
 				color: @white;
-			}
-		} 
+			}			
+		});
 	}	
 	@keyframes scroll {
 		0%   {transform:translateX(-50%) translateY(0);}

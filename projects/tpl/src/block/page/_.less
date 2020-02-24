@@ -9,10 +9,10 @@
 		@media print{padding: 0!important}		
 		padding-top: 40px;
 		padding-bottom: 40px;
-		@media @media-point-screen {
+		.media-breakpoint-up(@lg; {
 			padding-top: 3.2vw;
-			padding-bottom: 5.2vw;
-		}
+			padding-bottom: 5.2vw;			
+		});
 		&.is--full{
 			@media @media-point-smart {
 				min-height: ~"calc(100vh - @{navbar_xs})";
@@ -126,61 +126,5 @@
 	}		  
 	&cols{
 		//page
-	}
-	&heading{
-		h2&{
-			margin-bottom: 30px;
-			@media @media-point-screen {
-				margin-bottom: 2.2vw;
-			}			
-		}
-		h3&{
-			margin-bottom: 25px;
-			@media @media-point-screen {
-				margin-bottom: 1.8vw;
-			}			
-		}
-		h4&{
-			margin-bottom: 20px;
-			@media @media-point-screen {
-				margin-bottom: 1.4vw;
-			}
-		}
-		h5&{
-			font-weight: 700;
-			margin-bottom: 15px;
-			@media @media-point-screen {
-				margin-bottom: 1vw;
-			}
-		}
-		&.is--center{
-			text-align: center;
-		}
-	}
-	&text{
-		&.is--center{
-			text-align: center;
-		}
-	}
-	&preview{
-	}
-	&slick{
-	}
-	&slick-item{
-		&.is--gallery{
-			padding: 0 15px;
-		}
-	}
-	&btn{
-		padding-top: 35px;
-		&.is--pt0{
-			padding-top: 0;
-		}
-		&.is--center{
-			text-align: center;
-		} 
-		//page
-	}
-	&item{
 	}
 }
