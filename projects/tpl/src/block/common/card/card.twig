@@ -1,0 +1,68 @@
+{% if view == "preview" %}
+{% for value in list %}		
+<a href="{{value.link}}" class="{{prefix}}card  {{mod}}">
+	<div class="{{prefix}}preview  {{mod}}">
+		<img src="{{value.img}}" alt="{{value.heading}}" class="img-responsive">
+	</div>
+	<h5 class="{{prefix}}heading  {{mod}}">{{value.heading}}</h5>
+	<div class="{{prefix}}bg {{mod}}">
+		<div class="{{prefix}}view  {{mod}}"></div>
+	</div> 
+</a> 
+{% endfor %}
+{% endif %}
+
+{% if view == "gallery" %}
+{% for value in list %}	
+<div class="{{mod_elem}}">
+	<div class="{{prefix}}card  {{mod}}">
+		<a href="{{path.img}}{{value.img_fancy}}" data-fancybox="{{fancy}}" class="{{prefix}}preview  {{mod}}">
+			<img src="{{value.img}}" alt="" class="img-responsive">
+			<div class="{{prefix}}bg  {{mod}}">
+				<div class="{{prefix}}view  {{mod}}"></div>
+			</div>
+		</a>
+	</div>
+</div>
+{% endfor %}
+{% endif %}
+
+{% if view == "reviews" %}
+{% for value in list %}		
+<div class="{{prefix}}card  {{mod}}">
+	<div class="{{prefix}}heading-block  {{mod}}">	
+		<h4 class="{{prefix}}heading  {{mod}}">{{value.heading}}</h4>
+		<div class="{{prefix}}line  {{mod}}"></div>
+		<time class="{{prefix}}date  {{mod}}" datetime="{{value.date_iso}}">{{value.date}}</time>
+	</div>
+	<div class="{{prefix}}note  {{mod}}">{{value.note}}</div>
+</div> 
+{% endfor %}
+{% endif %}
+
+{% if view == "news" %}
+{% for value in list %}		
+<article class="{{prefix}}card  {{mod}}">
+	<a href="{{value.link}}" class="{{prefix}}preview  {{mod}}">
+		<img src="{{value.img}}" alt="{{value.heading}}" class="img-responsive">
+		<div class="{{prefix}}bg  {{mod}}">
+			<div class="{{prefix}}view  {{mod}}"></div>
+		</div>
+	</a>
+	<time class="{{prefix}}date  {{mod}}" datetime="{{value.date_iso}}">{{value.date}}</time>
+	<h4 class="{{prefix}}heading  {{mod}}"><a href="{{link}}">{{value.heading}}</a></h4>
+	<div class="{{prefix}}note  {{mod}}">{{value.note}}</div>	
+</article>
+{% endfor %}
+{% endif %}
+
+{% if view == "adv" %}
+{% for value in list %}		
+<div class="{{prefix}}card  {{mod}}">
+	<div class="{{prefix}}preview  {{mod}}">
+		{% include "../../common/svg-sprite/svg.twig" with {icon:value.icon} %}
+	</div>
+	<h5 class="{{prefix}}heading  {{mod}}">{{value.heading}}</h5>
+</div> 
+{% endfor %}
+{% endif %}

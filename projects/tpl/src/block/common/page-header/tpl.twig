@@ -1,0 +1,21 @@
+{% if view == "test" %}
+<h4 class="{{prefix}}heading">{{heading}}</h4>
+<h1 style="margin-bottom: 20px">Header H1</h1>
+<h2 style="margin-bottom: 20px">Header H2</h2>
+<h3 style="margin-bottom: 20px">Header H3</h3>
+<h4 style="margin-bottom: 20px">Header H4</h4>
+<h5 style="margin-bottom: 20px">Header H5</h5>
+<h6>Header H6</h6>
+{% else %}
+<div class="{{prefix}}group  {{group}}">
+	{% if bread != null %}
+		{% include "../breadcrumb/tpl.twig" with {prefix:"breadcrumb__", mod:bread_mod, bread:bread, bread_l2:bread_l2, bread_l2_link:bread_l2_link, bread_l3:bread_l3,  bread_l3_link:bread_l3_link } %}
+	{% endif %}		
+	<div class="{{prefix}}panel  {{group}}">
+		<{{level}} class="{{prefix}}heading  {{mod}}  {{group}}" {% if heading_view == "modal" %}data-modal-heading{% endif %}>{{heading}}</{{level}}>
+		{% if heading_sm != null %}
+			<{{level_sm}} class="{{prefix}}heading-small  {{group}}"  {% if heading_view == "modal" %}data-modal-heading-small{% endif %}>{{heading_sm}}</{{level_sm}}>
+		{% endif %}			
+	</div>
+</div>
+{% endif %}

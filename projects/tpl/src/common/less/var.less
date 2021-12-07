@@ -1,0 +1,484 @@
+//===== url =====//
+@url-site 					: 	'';
+@url-path 					: 	'/wp-content/themes/azbn7theme'; 
+//@url-path 				: 	'/tpl/';
+@url-path 					: 	'';
+@url-path-css 				: 	'@{url-path}/css';
+@url-path-fonts 			: 	'@{url-path}/fonts';
+@url-path-img 				: 	'@{url-path}/img';
+@url-path-js 				: 	'@{url-path}/js';
+
+//===== color =====//
+//= social
+@color-vk 					: 	#4d7198;
+@color-yb 					: 	#bb0000;
+@color-skype 				: 	#4d7198;
+@color-viber 				: 	#7F40BD;
+@color-whatsapp 			: 	#7AD06D;
+@color-ok 					: 	#ee8208;
+@color-fb 					: 	#3b5998;
+@color-tw 					: 	#1faee9;
+@color-be 					: 	#4176fa;
+@color-pint 				:	#cd1f28;
+@color-inst 				: 	#f26798;
+@color-drb 					: 	#f26798;
+@color-pdf 					:	#bb0706;
+@color-doc 					:	#2186fa;
+@color-xls 					:	#23a565;
+@color-ppt 					:	#cd4b33;
+@color-jpg 					:	#208895;
+@color-zip 					:	#f2e295;
+@color-txt 					:	#6fbbcc;
+
+//= default
+@white 						:	#fff;
+@black 						: 	#000;
+@black-33 					: 	#333;
+@black-b5 					: 	#B5B5BD;
+@orange 					:	#F24F00;
+@yellow 					:	#FF8E26;
+
+@primary 					:	@orange;
+@default 					:	@black;
+@warning 					:	@black-33;
+@success 					:	@yellow;
+@info 						:	@black-b5;
+@danger 					:	@white;
+
+
+//===== fonts =====//
+@roboto 					:	roboto-400;
+@roboto-700 				:	roboto-700;
+
+@magistral 					:	magistral-700;
+
+//===== base =====//
+@b-color 					:	@default; 
+@b-color-a 					:	@primary; 
+@b-color-a-hover 			:	@success; 
+@b-color-h 					:	@warning; 
+@b-block-bg 				:	@info;
+
+@b-html-bg 					:	@white; 
+@b-body-bg 					:	@white; 
+@b-ff 						:	@roboto;
+@b-ff-2 					:	@magistral;
+@b-italic 					:	@b-ff;
+@b-bold 					:	@b-ff; 		
+@b-fs 						: 	18px;
+@b-lh 						: 	24px;
+@trs-site 					: 	all 0.35s ease; 
+@trs-option 				: 	0.35s ease; 
+@b_rad 						: 	5px; 
+//
+@margin_map:
+	huge 	4.4vw	30px,
+	normal 	3.4vw	30px,
+	large 	3.4vw	30px,
+	medium 	2.4vw	25px,
+	small 	1.8vw	20px,
+	tiny 	15px	15px,
+	narrow 	10px	10px;
+@fw_map:
+	thin 	100,
+	elight 	200,
+	light 	300,
+	normal 	400,
+	medium  500,
+	sbold  	600,
+	bold  	700,
+	ebold 	800,
+	black  	900;
+//===== grid =====//
+@xs 						:	0px;
+@sm 						:	575px;
+@md 						:	768px;
+@lg 						:	992px;
+@xl 						:	1200px;
+@xxl 						:	1700px;
+
+@b-container  				:	1570px;
+@b-container-default  		:	1045px;
+
+//===== navbar =====//
+@navbar_bg_screen 			:	@info;
+@navbar_bg_screen_hover 	:	@info; 
+@navbar_bg_device 			:	@info;
+@navbar_ff 					:	@b-ff;
+@navbar_fs 					:	@b-fs; 
+@navbar_lh 					:	@b-lh;  
+@navbar_color_link 			:	@primary;
+@navbar_color 				:	@b-color;
+@navbar_color_hover 		:	@primary;
+@navbar_active_bg 			:	@primary;
+@navbar_active_color 		:	@primary;
+
+@navbar_color_device 		:	@b-color;
+@navbar_color_device_hover 	:	@primary;
+
+@navbar_collapse_bg 		:	@info;
+@navbar_collapse_color  	:	@white;
+@navbar_collapse_color_hover: 	@b-color;
+
+@navbar_humb_width 			:	42px;
+@navbar_humb_bg 			:	@primary;
+@navbar_humb_bg_active 		:	@primary;
+//= logotip
+@navbar_logo_color 			: 	@primary;
+@navbar_logo_widht 			: 	120px;
+@navbar_logo_height 		: 	50px;
+@navbar_logo_device_widht 	: 	100px;
+@navbar_logo_device_height 	: 	42px;
+
+//= size
+@navbar_device 				:	62px;   
+@navbar_xs 					:	@navbar_device;
+@navbar_sm 					:	@navbar_device;
+@navbar_md 					:	@navbar_device;
+@navbar_screen 				:	96px;
+@navbar_lg 					:	@navbar_screen;
+@navbar_xl 					:	@navbar_screen;
+@navbar_xxl 				:	@navbar_screen; 
+
+@navbar_bottom 				:	54px;
+@navbar_bottom_tabs 		:	64px;
+//===== end's navbar =====//
+
+//===== footer =====//
+@footer_color 				:	@white; 
+@footer_color_hover 		:	@white; 
+@footer_bg 					:	@warning;
+@footer_ff 					:	@b-ff; 
+@footer_fs 					:	@b-fs; 
+@footer_lh 					:	@b-lh; 
+
+//= logotip
+@footer_logo_color 			: 	@primary;
+@footer_logo_widht 			: 	120px;
+@footer_logo_height 		: 	50px;
+
+//= size
+/*@footer_xs 				:	75px;*/
+@footer_sm 					:	84px;
+@footer_device_sm_p 		:	84px;
+@footer_device_sm_l 		:	84px;
+@footer_screen 				:	90px;
+@footer_screen_md 			:	@footer_screen;
+@footer_screen_lg 			:	@footer_screen;
+@footer_screen_xxl 			:	@footer_screen;
+//===== end's footer =====//
+
+//===== btn =====//
+@btn_fs 					: 	@b-fs;
+@btn_lh 					: 	@b-lh;
+@btn_radius 				:	0;
+//== base ==
+@btn_color 					:	@white;
+@btn_border_color 			:	@primary;
+@btn_bg_color 				:	@primary;
+//= hover =
+@btn_hover_color 			:	@white;
+@btn_hover_bg_color 		:	@success;	
+@btn_hover_border_color 	:	@success;
+
+//== white ==
+@btn_w_color 				:	@primary;
+@btn_w_border_color 		:	@white;
+@btn_w_bg_color 			:	@white;
+//= hover =
+@btn_w_hover_color 			:	@white;
+@btn_w_hover_bg_color 		:	@primary;	
+@btn_w_hover_border_color 	:	@primary;
+
+//== invers ==
+@btn_i_color 				:	@btn_hover_color;
+@btn_i_border_color 		:	@btn_hover_border_color;
+@btn_i_bg_color 			:	@btn_hover_bg_color;
+//= hover =
+@btn_i_hover_color 			:	@btn_color;
+@btn_i_hover_border_color 	:	@btn_border_color;
+@btn_i_hover_bg_color 		:	@btn_bg_color;	
+
+//== link ==
+@btn_l_color 				:	@primary;
+@btn_l_border 				:	2px;
+@btn_l_border_color 		:	@success;
+@btn_l_bg_color 			:	@success;
+//= hover =
+@btn_l_hover_color 			:	@primary;
+@btn_l_hover_border_color 	:	@primary;
+@btn_l_hover_bg_color 		:	@primary;
+//===== end's btn =====//
+
+//===== tabs =====//
+@tabs_color 				:	@b-color;
+@tabs_border_color 			:	@info;
+@tabs_color_active 			:	@white;
+@tabs_bg_active 			:	@primary;
+@tabs_border_color_active 	:	@primary;
+//===== end's tabs =====//
+
+//===== form  =====//
+//=== input ===
+@input_label				: 	@default;
+@input_bg					:	@white;
+@input_height				:	50px;
+@input_height_textarea		:	145px;
+@input_radius				:	0px;
+@input_border_color			:	@success;
+@input_border_width			:	2px;
+
+//= focus =
+@input_focus_bg				:	@white;
+@input_focus_border_color	:	@primary;
+
+//== input text ==
+@input_t_color				:	@warning;
+@input_t_fs					:	@b-fs;
+@input_t_lh					:	@b-lh;
+//= focus =
+@input_focus_t_color		:	@warning;
+
+//== placeholder ==
+@input_plh_color			:	@success;
+@input_plh_fs				:	@b-fs;
+@input_plh_lh				:	@b-lh;
+//= focus =
+@input_focus_plh_color		:	@b-color;
+
+//== white ==
+@input_w_bg					:	fadeout(@white, 100%);
+@input_w_color				:	@white;
+@input_w_border_color		:	@white;
+//= focus =
+@input_w_focus_bg			:	@white;
+@input_w_focus_border_color	:	@primary;
+@input_w_focus_color		:	@b-color;
+
+//== placeholder ==
+@input_w_plh_color			:	@white;
+//= focus =
+@input_w_focus_plh_color	:	@b-color;
+
+//=== range ===
+@range_height 				: 	40px;
+@range_line_bg 				: 	@primary;
+@range_line_bg_hover 		: 	@success;
+
+@range_btn_bg 				: 	@success;
+@range_btn_bg_hover 		: 	@primary;
+@range_btn_color 			: 	@white;
+
+//=== radio ===
+@radio_gutter 				: 	4px;
+@radio_bg 					: 	@primary;
+@radio_bg_hover 			: 	@success;
+@radio_bg_active 			: 	@b-color;
+
+//=== error ===
+@form_error_bg 				: 	@primary;
+@form_error_bg_pass 		: 	@success;
+@form_error_bg_load 		: 	@default;
+@form_error_text_color 		: 	@white;
+@form_error_border_color 	: 	@primary;
+@form_error_border_width 	: 	0px;
+@form_error_fs 				: 	@b-fs - 6;
+@form_error_lh 				: 	@b-lh - 6;
+@form_error_radius 			: 	0;
+
+
+//=== radio ===
+@radio_color 				: 	@default;
+@radio_size 				: 	20px;
+@radio_gutter 				: 	4px;
+@radio_bg 					: 	@white;
+@radio_border_width 		: 	1px;
+@radio_border_color 		: 	@default;
+@radio_icon 				: 	transparent;
+@radio_radius 				: 	50%;
+
+//= disabled =
+@radio_disabled_icon		:	@white;
+@radio_disabled_bg			: 	fadeout(@default, 30%);
+
+//= focus =
+@radio_focus_color 			: 	@primary;
+@radio_focus_bg 			: 	@primary;
+@radio_focus_shadow	 		:	@success;
+@radio_focus_border_color	: 	@primary;
+@radio_focus_icon 			: 	@white;
+
+//=== check ===
+@check_radius 				: 	2px;
+@check_color				:	@default;
+@check_fs					:	@b-fs;
+@check_lh					:	@b-lh;
+@check_size					:	20px;
+@check_bg					:	@input_bg;
+@check_border_color			:	@default;
+@check_border_width			:	1px;
+@check_icon					:	transparent;
+
+//= focus =
+@check_focus_border_color	:	@primary;
+@check_focus_shadow	 		:	@success;
+@check_focus_bg				:	@white;
+@check_focus_icon			:	@primary;
+
+//= disabled =
+@check_disabled_bg			:	fadeout(@default, 30%);
+@check_disabled_icon		:	@white;
+
+//== white ==
+@check_w_color				:	@white;
+@check_w_bg					:	transparent;
+@check_w_border_color 		: 	@white;
+@check_w_icon				:	transparent;
+//= focus =
+@check_w_focus_bg 			: 	@primary;
+@check_w_focus_border_color : 	@primary;
+@check_w_focus_shadow	 	:	@white;
+@check_w_focus_icon			:	@white;
+
+//= disabled =
+@check_w_disabled_bg 		: 	fadeout(@white, 30%);
+@check_w_disabled_border_color : 	fadeout(@white, 30%);
+@check_w_disabled_icon 		: 	@primary;
+
+//=== file ===
+@file_color					:	@primary;
+@file_icon					:	@primary;
+@file_size					:	18px;
+@file_border_color			:	currentColor;
+//= focus =
+@file_focus_color 			: 	@success;
+@file_focus_border_color 	: 	transparent;
+
+//=== reset ===
+@reset_color				:	@info;
+@reset_fs					:	@b-fs;
+@reset_lh					:	@b-lh;
+@reset_size					:	22px;
+@reset_border_width			:	2px;
+@reset_border_color			:	@info;
+@reset_bg_color				:	fadeout(@info, 50%);
+//= focus =
+@reset_focus_border_color	:	transparent;
+@reset_focus_bg_color		:	@primary;
+@reset_focus_color			:	@primary;
+
+//=== search ===
+@search_border 				:	1px;
+@search_radius				:	22px;
+@search_border_color		:	@info;
+@search_height				:	44px;
+
+@search_input_color			:	@b-color;
+@search_input_bg			:	@white;
+
+@search_btn_color			:	@b-color;
+@search_btn_bg				:	@white;
+//= focus =
+@search_input_f_color		:	@warning;
+@search_input_f_bg			:	@info;
+
+@search_btn_f_color			:	@warning;
+@search_btn_f_bg			:	@info;
+//===== end's form =====//
+//===== table =====//
+@table_color 				:	@b-color;
+@table_border_color 		:	@info;
+@table_bg_colspan 			:	@white;
+@table_padding 				:	10px 12px;
+
+@table_head_color 			:	@b-color;
+@table_head_bg 				:	@info;
+@table_head_padding 		:	12px;
+@table_head_border_color 	:	@info;
+//===== end's table =====//
+
+//===== pagination =====//
+@pagin_gutter 				:	2px;
+@pagin_color 				: 	@default;
+@pagin_color_hover 			: 	@default;
+@pagin_color_active 		: 	@b-color;
+@pagin_bg 					:	@b-color;
+@pagin_bg_hover 			: 	@success;
+@pagin_bg_active 			: 	@primary;
+//===== end's pagination =====//
+
+//===== breadcrumb =====//
+@bread_fs 					: 	@b-fs;
+@bread_lh 					: 	@b-lh;
+@bread_color 				: 	@b-color;
+@bread_color_active 		: 	@success;
+@bread_style_line 			:	solid;
+//===== end's breadcrumb =====//
+
+//===== modals =====//
+@modal_backdrop 			:	@default;
+@modal_backdrop_fade 		:	0.9;
+@modal_bg 					:	@white;
+@modal_border_rad 			:	5px;
+@modal_width 				:	500px;
+@modal_width_device 		:	650px;
+@modal_btn_width 			: 	34px;
+@modal_btn_border_rad 		:	50%;
+@modal_btn_color 			:	@primary;
+@modal_btn_bg 				:	@modal_bg;
+@modal_btn_border 			:	2px;
+@modal_btn_border_color 	:	@primary;
+@modal_btn_color_hover 		:	@white;
+@modal_btn_bg_hover 		:	@success;
+@modal_btn_border_color_hover:	@success;
+//===== end's modals =====//
+
+//===== map =====//
+@map_popup_bg 				:	@white;
+@map_popup_color 			:	@primary;
+//===== end's map =====//
+
+//===== continfo =====//
+@continfo_color 			:	@warning;
+@continfo_icon_bg 			:	@white;
+@continfo_icon_color 		:	@primary;
+@continfo_icon_width 		:	32px;
+@continfo_icon_padding 		:	6px;
+@continfo_icon_border 		:	2px;
+@continfo_icon_border_color	:	@primary;
+@continfo_icon_radius		:	5px;
+//===== end's continfo =====//
+
+//===== social =====//
+@soc_size 					: 	32px;
+@soc_border_radius 			: 	50%;
+@soc_border 				: 	@success;
+@soc_bg 					: 	@success;
+@soc_bg_hover 				: 	@primary;
+@soc_color 					: 	@primary;
+@soc_color_hover 			: 	@white;
+@soc_color_contacts  		:	@b-color;
+@soc_gutter 				:	5px; 
+//===== end's  social =====//
+
+//===== slider slick =====//
+@slider_btn_width 			: 	36px;
+@slider_btn_padding 		: 	0 8px;
+@slider_btn_color 			: 	@b-color;
+@slider_btn_bg 				: 	@white;
+@slider_btn_border 			: 	2px;
+@slider_btn_border_color 	: 	@primary;
+@slider_btn_radius 			: 	0%;
+
+@slider_btn_color_hover 	: 	@white;
+@slider_btn_bg_hover 		: 	@primary;
+@slider_btn_border_color_hover:	@primary;
+
+@slider_dots_bottom 		: 	1.5vw;
+@slider_dots_width 			: 	10px;
+@slider_dots_gutter 		: 	10px;
+@slider_dots_bg 			: 	@success;
+@slider_dots_radius 		: 	50%;
+
+@slider_dots_bg_active 		: 	@primary;
+//===== end's slider slick =====// 

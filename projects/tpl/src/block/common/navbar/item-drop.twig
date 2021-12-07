@@ -1,0 +1,10 @@
+<li class="{{prefix}}nav-item dropdown  {{mod}}">
+	<a href="#" class="dropdown-toggle {{prefix}}nav-link" data-toggle="dropdown">{{name}}</a>
+	<div class="{{prefix}}nav-dropdown dropdown-menu">			
+		<ul class="{{prefix}}nav-dropdown-menu">
+		    {% for value in list %}
+			<li class="{{prefix}}nav-dropdown-item  {{value.mod}}"><a href="{{value.link}}" class="{{navbar_prefix}}nav-dropdown-link"><span>{{value.name}}</span></a></li>
+		    {% endfor %}
+		</ul>
+	</div>
+</li>

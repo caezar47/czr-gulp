@@ -1,0 +1,8 @@
+<form action="{{page.search}}" class="{{prefix}}item  is--search  {{mod}}">
+	<div class="{{prefix}}search  {{mod}}">
+		<input type="text" class="{{prefix}}search-input  {{mod}}" placeholder="{{block_placeholder}}" >
+		<button type="submit" class="{{prefix}}search-btn  {{mod}}">
+			{% include "../svg-sprite/svg.twig" with {icon:"icon-search"} %}
+		</button>
+	</div>
+</form>

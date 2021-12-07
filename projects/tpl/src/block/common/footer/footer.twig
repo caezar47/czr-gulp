@@ -1,0 +1,15 @@
+<footer class="{{footer_prefix}}block">	
+	<div class="{{footer_prefix}}inner">	
+		<div class="{{footer_prefix}}container container">
+			<div class="{{footer_prefix}}row row  is--base">
+				<div class="{{footer_prefix}}cols cols  is--copyright">
+					<a href="{{page.index}}" class="{{footer_prefix}}logotip">
+						{% include "../svg-sprite/svg.twig" with {icon:"logotip"} %}
+					</a>
+				</div>				
+
+				{% include "../../common/continfo/tpl.twig" with {view: "footer", prefix:"continfo__", group_prefix:footer_prefix, mod:"is--footer", list:[{"mod":"","name":contacts.address, "icon":"contacts-address", "tag":"div"},{"mod":"is--email","name":contacts.email, "href":contacts.email, "icon":"contacts-email", "tag":"a", "target":"mailto:"},{"mod":"is--tel","name":contacts.phone, "href":contacts.phone_tel, "icon":"contacts-tel", "tag":"a", "target":"tel:"}]} %} 
+			</div>	
+		</div>
+	</div>
+</footer>

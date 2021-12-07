@@ -1,0 +1,53 @@
+<div class="{{prefix}}block  {{mod}}" {% if panel=="block" %}style="background-image: url({{path.img}}{{bg}})"{% endif %}>
+	{% if panel=="block" %}<div class="{{prefix}}container container  {{mod}}"  >{% endif %}
+	{% include "../../common/page-header/tpl.twig" with {heading_view:heading_view, prefix:"page-header__", mod:heading_mod, group:heading_group, level:heading_level, heading:heading, level_sm:heading_sm_level, heading_sm:heading_sm} %}
+	<form action="#" class="{{prefix}}panel  {{mod}}  azbn7__api__form" data-form-validation>
+		<input type="hidden" name="key" value="londonisthecapitalofgreatbritain">
+		<input type="hidden" name="f[Форма: {{heading}}]" {% if heading_view == "modal" %}data-form-heading{% endif %}>
+		<div class="{{prefix}}grid-row  grid__row  {{mod}}">
+			{% if view == "default" %}
+				{% include "elem-tpl.twig" with {view: "input", prefix:prefix, mod:mod, color:color, list: [{"type":"text", "id":"name", "form_id":ID, "validate":"validate[required, custom[onlyLetterSp]]", "mod_elem":"grid__cols", "name":"Имя", "placeholder":"Введите ваше имя"},{"type":"text", "id":"email", "form_id":ID, "validate":"validate[required, custom[email]]", "mod_elem":"grid__cols", "name":"Email", "placeholder":"Введите ваш E-mail"},{"type":"tel", "id":"tel", "form_id":ID, "validate":"validate[required, custom[phone]]", "mod_elem":"grid__cols", "name":"Номер телефона", "placeholder":"Введите ваш номер телефона"}]} %}
+
+				{% include "elem-tpl.twig" with {view:"select", prefix:prefix, mod:mod, color:color, mod_elem:"grid__cols", id:"select", form_id:ID, validate:"validate[required]", name:"Список", list: [{"name": "Выберите пункт","status": "selected disabled"},{"name": "Пункт1"},{"name": "Пункт2"},{"name": "Пункт3"}] } %}
+
+				{% include "elem-tpl.twig" with {view:"radio", prefix:prefix, mod:mod, color:color, mod_elem:"grid__cols", list: [{"id":"r1", "form_id":ID, "name":"Радио кнопки", "label":"Имя"},{"id":"r2", "form_id":ID, "name":"Радио кнопки", "label":"Фамилия"},{"id":"r3", "form_id":ID, "name":"Радио кнопки", "label":"Отчество"}] } %}
+
+				{% include "elem-tpl.twig" with {view:"checkbox", prefix:prefix, mod:mod, color:color, mod_elem:"grid__cols", list: [{"id":"r1", "form_id":ID, "name":"Чексбокс", "label":"Имя"},{"id":"r2", "form_id":ID, "name":"Радио кнопки", "label":"Фамилия"},{"id":"r3", "form_id":ID, "name":"Радио кнопки", "label":"Отчество"}] } %}
+
+				{% include "elem-tpl.twig" with {view:"file", prefix:prefix, mod:mod, color:color, mod_elem:"grid__cols", id:"file", form_id:ID, validate:"validate[required]", name:"Прикрепить документ" } %}
+
+				{% include "elem-tpl.twig" with {view:"range", prefix:prefix, mod:mod, color:color, mod_elem:"grid__cols", id:"range", form_id:ID, validate:"validate[required]", name:"Range slider документ", type:"doble", step:"1", min:"1", max:"18", from:"4", to:"14" } %}
+
+				{% include "elem-tpl.twig" with {view:"agreement", prefix:prefix, mod:mod, color:color, mod_elem:"grid__cols  is--agreement", btn_name:btn_name} %}
+
+				<div class="grid__cols  is--btn">
+					{% include "../button/btn.twig" with {view:"btn", prefix:"btn__", mod:btn_mod, type:"submit", name:btn_name } %}
+				</div>
+
+				{% include "elem-tpl.twig" with {view:"reset", prefix:prefix, mod:mod, color:color, mod_elem:"grid__cols", id:"file", form_id:ID, name:"Сбросить форму" } %}
+			{% endif %}
+
+			{% if view == "call" %}
+				{% include "elem-tpl.twig" with {heading_view:heading_view,view: "input", prefix:prefix, mod:mod, color:color, list: [{"type":"text", "id":"name", "form_id":ID, "validate":"validate[required, custom[onlyLetterSp]]", "mod_elem":"grid__cols", "name":"Имя", "placeholder":"Введите ваше имя"},{"type":"tel", "id":"tel", "form_id":ID, "validate":"validate[required, custom[phone]]", "mod_elem":"grid__cols", "name":"Номер телефона", "placeholder":"Введите ваш номер телефона"}]} %}
+				{% include "elem-tpl.twig" with {view:"agreement", prefix:prefix, mod:mod, color:color, mod_elem:"grid__cols  is--agreement", btn_name:btn_name} %}
+				<div class="grid__cols  is--btn">
+					{% include "../button/btn.twig" with {heading_view:heading_view, view:"btn", prefix:"btn__", mod:btn_mod, type:"submit", name:btn_name } %}	
+				</div>
+			{% endif %}
+
+			{% if view == "reviews" %}
+				{% include "elem-tpl.twig" with {view: "input", prefix:prefix, mod:mod, color:color, list: [{"type":"text", "id":"name", "form_id":ID, "validate":"validate[required, custom[onlyLetterSp]]", "mod_elem":"grid__cols", "name":"Имя", "placeholder":"Введите ваше имя"},{"type":"tel", "id":"tel", "form_id":ID, "validate":"validate[required, custom[phone]]", "mod_elem":"grid__cols", "name":"Номер телефона", "placeholder":"Введите ваш номер телефона"}]} %}
+
+				{% include "elem-tpl.twig" with {view: "textarea", prefix:prefix, mod:mod, color:color, id:"comments", "form_id":ID, "validate":"validate[required]", mod_elem:"grid__cols  is--full", name:"Сообщение", placeholder:"Сообщение"} %}
+
+				<div class="grid__cols  is--btn">
+					{% include "../button/btn.twig" with {view:"btn", prefix:"btn__", mod:btn_mod, type:"submit", name:btn_name } %}	
+				</div>
+
+				{% include "elem-tpl.twig" with {view:"agreement", prefix:prefix, mod:mod, color:color, mod_elem:"grid__cols  is--agreement", btn_name:btn_name} %}
+			{% endif %}
+
+		</div>	
+	</form> 
+	{% if panel=="block" %}</div>{% endif %}
+</div> 

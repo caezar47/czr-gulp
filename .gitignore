@@ -1,0 +1,7 @@
+.idea/*
+node_modules/*
+projects/*
+!projects/tpl
+projects/tpl/tmp/*
+tmp/*
+package-lock.json

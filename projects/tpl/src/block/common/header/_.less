@@ -1,0 +1,113 @@
+.header-block__{
+	&block{
+		position: relative;
+		overflow: hidden;
+		background-size: cover;
+		background-position: center;
+		background-repeat: no-repeat;
+		padding-top: 20px;
+		padding-bottom: 20px;
+		.media-breakpoint-up(@xl; {
+			padding-top: @navbar_screen;
+			padding-bottom: @navbar_screen;
+			background-attachment: fixed;
+			max-height: 960px;
+			height: 100vh;			
+		});
+	}
+	&slick{
+		position: absolute!important;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		left: 0;
+
+		z-index: 1;
+		*{
+			width: 100%;
+			height: 100%;
+		}
+		img{
+			.img-fit();
+		}
+	}
+	&container{
+		position: relative;
+		z-index: 2;
+		height: 100%;
+	}
+	&panel{
+		position: relative;
+		padding: 30px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		.media-breakpoint-up(@xl; {
+			position: absolute;
+			top: 53%;
+			left: 15px;
+			right: 15px;	
+			transform: translateY(-50%);
+			//top: 320px;
+			padding-top: 4.2vw;
+			padding-bottom: 4.2vw;
+		});
+	}
+	&inner{
+		
+	}
+	&heading{
+		font-family: @b-ff-2;
+		text-align: center;
+		color: @white;
+		.calcFontSize(26, 34, 320, 767);
+		.calcLineHeight(30, 38, 320, 767);
+		font-weight: 400;
+		margin-bottom: 10px;
+		.media-breakpoint-up(@md; {
+			.calcFontSize(38, 60, 768, 1680);
+			.calcLineHeight(38, 60, 768, 1680);
+		});
+	}
+	&heading-small{
+		text-align: center;
+		.heading4();
+		margin-bottom: 35px;
+		color: @white;
+		.media-breakpoint-down(@md; {
+			br{display: none;}			
+		});
+		.media-breakpoint-up(@xl; {
+			margin-bottom: 1.8vw;			
+		});	
+	}
+	&btn{ 
+		text-align: center;
+		.btn__item{
+			color: @black;
+		}
+	}
+	&scrollto{
+		display: none;
+		.media-breakpoint-up(@xl; {
+			display: block;
+			position: absolute;
+			z-index: 3;
+			left: 50%;
+			transform: translateX(-50%);
+			bottom: 2.4vw;
+			color: @white;
+			width: 28px;
+			height: 50px;
+			animation: scroll 1.5s infinite ease-in-out;
+			&:hover{
+				color: @white;
+			}			
+		});
+	}	
+	@keyframes scroll {
+		0%   {transform:translateX(-50%) translateY(0);}
+		50%   {transform:translateX(-50%) translateY(5px);}
+		100% {transform:translateX(-50%) translateY(0);}
+	}
+}

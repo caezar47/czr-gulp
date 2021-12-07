@@ -1,0 +1,71 @@
+{
+	"contacts":{
+		"name":"TPL",
+		"domain":"domain.domain",
+		"domain_link":"http://domain.domain/",
+		"color":"#F24F00",
+		"agreement_page":"agreement",
+		"copyright":"TPL",
+		"email":"email@email.ru",
+		"phone":"+7 (012) 345-67-89",  
+		"phone_tel":"+70123456789",   
+		"clock":"<p>Пн-Пт: 07:00-16:00</p><p>Сб-Вс: выходной</p>",  
+		"address":"г. Орёл, Сквер им. Сталина",
+		"map_center_coord":"[52.97067, 36.084622]",
+		"map_zoom":"17",
+		"map_point_coord":"[52.97067, 36.084622]",
+		"map_point_heading":"Мы здесь!"
+	},
+	"soc":{
+		"vk":"https://vk.com/",
+		"fb":"https://www.facebook.com/",
+		"ok":"https://ok.ru/group/",
+		"tw":"https://twitter.com/",
+		"inst":"https://www.instagram.com/"
+	},
+
+	"page":{
+		"index":"/",
+		"about":"/about.html",
+		"articles":"/articles.html",
+		"articles_card":"/articles-card.html",
+		"action":"/action.html",
+		"action_card":"/action-card.html",
+		"services":"/services.html",
+		"services_card":"/services-card.html",
+		"portfolio":"/portfolio.html",
+		"portfolio_card":"/portfolio-card.html",
+		"reviews":"/reviews.html",
+		"contacts":"/contacts.html",
+		"404":"/404.html",
+		"sitemap":"/sitemap.html",
+		"style":"/style.html",
+		"agreement":"/agreement.html"
+	},
+	"prefix":{
+		"heading":"page-header__",
+		"form":"form__",
+		"btn":"btn__",
+		"link":"link__",
+		"btn-icon":"btn-icon__"
+	},		
+	"email":{
+		"email":"partner@fedoperator.ru",
+		"phone":"+7 (910) 303-04-63",  
+		"phone_tel":"+79103030463",
+		"path_img":"//orel.fedoperator.ru/var/site/static/img"
+	}, 
+	"path":{		                  
+		"css":"/css",
+		"img":"/img",
+		"js":"/js",
+		"favicon":"/favicon",
+		"docs":"/docs"
+	},                       
+	"url-path-css":"/css",
+	"url-path-img":"/img",
+	"url-path-js":"/js",
+	"url-path-plugins":"/plugins",
+	"url-path-favicon":"/favicon",
+	"url-path-docs":"/docs"
+}

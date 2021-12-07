@@ -1,0 +1,138 @@
+.tables__{
+	&panel{
+	}
+	&heading{
+		margin-bottom: 25px;
+		.media-breakpoint-up(@lg; {
+			margin-bottom: 1.55vw;
+		});
+	}
+	&heading-row{
+		justify-content: space-between;
+		align-items: center;
+	}
+	&heading-cols{
+		
+	}
+	&card{
+		margin-bottom: 35px;
+		.media-breakpoint-up(@lg; {
+			margin-bottom: 2.5vw;
+		});
+		&:last-child{
+			margin-bottom: 0;
+		}
+	}
+	&item{
+		padding-bottom: 25px;
+		.media-breakpoint-up(@lg; {
+			margin-bottom: 2.3vw;
+		});
+		&:last-child{
+			margin-bottom: 0;
+		}		
+	}
+}
+.table-responsive{
+	overflow-x: auto;
+	min-height: 0.01%;
+	.media-breakpoint-down(@md; {
+		margin-right: -15px;
+		margin-left: -15px;
+		width: ~"calc(100% + 30px)"; 
+		overflow-y: hidden;
+		-ms-overflow-style: -ms-autohiding-scrollbar;
+	});
+} 
+.table{ 
+	width: 100%;
+	max-width: 100%;
+	border: 0; 
+	font-size: @b-fs - 2;
+	line-height: @b-lh - 6;
+	margin-bottom: 0;
+	@media print{
+		* {color: @black}
+	}
+	caption{
+		caption-side: bottom;
+	}			
+	thead{ 
+		tr{
+			td,th{
+				text-align: left;
+				border: 0;
+				border-left: 0;
+				background-color: @table_head_bg;
+				color: @table_head_color;	
+				padding: @table_head_padding;
+				font-weight: 700;
+				font-size: @b-fs - 6;
+				line-height: @b-lh - 8;
+				text-transform: uppercase;
+				border-top: 0;
+				vertical-align: middle;
+				border-bottom: 1px solid @table_head_border_color;	
+				//border-bottom: none;
+				//letter-spacing: 1px;
+				//text-align: center;
+				//text-transform: uppercase;	
+				//border-right: 1px solid fadeout(@white, 50%);	
+				@media print{
+					font-size: @b-fs - 4;
+					line-height: @b-lh - 8;
+					border: none;
+				}
+				&:first-child{
+					//border-left: 0;
+					//padding-left: 0;
+					//text-align: left;
+				}
+				small{
+					text-transform: none;
+					letter-spacing: 0;
+					font-weight: 300;
+				}
+			}
+			&:last-child{
+				td,th{
+					border-bottom: 1px solid @table_head_border_color;
+				}
+			}
+		}
+	}
+	tr{	
+		td, th{
+			border: 0;
+			vertical-align: middle;
+			background-color: @white;
+			color: @table_color;
+			p, div{
+				margin: 0;
+			}
+			padding: @table_padding;
+			border-bottom: 1px solid @table_border_color;
+			//text-align: center;
+			&[colspan]{
+				background-color: @table_bg_colspan;
+			}
+			.table-responsive &{
+				@media @media-point-smart {
+					white-space: nowrap;
+				}
+			}
+		}
+		&:first-child{
+			th, td{
+				//border-top: 2px solid @green;
+				//@media print{border-top-color: @black}
+			}
+		}
+		&:last-child{
+			th, td{
+				border-bottom: 1px solid @table_border_color;
+				@media print{border-bottom-color: @black}
+			}
+		}	
+	}
+}

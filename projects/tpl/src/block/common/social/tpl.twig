@@ -1,0 +1,11 @@
+<div class="{{prefix}}block">
+	<div class="{{prefix}}row row  {{mod}}">
+		{% for value in list %}	
+		<div class="{{prefix}}cols cols  {{mod}}">
+			<a href="{{value.link}}" class="{{prefix}}item  is--{{value.name}}  {{mod}}" target="_blank">
+				{% include "../svg-sprite/svg.twig" with {icon:value.name} %}
+			</a>
+		</div>
+		{% endfor %}
+	</div>
+</div>

@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="ru-RU"> 
+	<head>	
+    	{% include "../block/common/head/head.twig" with {title:"portfolio"}  %}
+	</head>
+	<body>
+    	{% include "../block/common/navbar/navbar.twig" with {navbar_prefix:"navbar__", navbar_mod:"is--scroll"} %}
+
+		{% include "../block/page/portfolio/page.twig" with {content_prefix:"content-block__", content_mod:"is--portfolio-page", heading_group:"", heading_mod:"is--h1  is--ff-2  align--center-notsmart", heading_level:"h1", heading:"Наши работы", bread_mod:"justify--center-notsmart", bread:"Наши работы"} %}
+
+    	{% include "../block/common/footer/footer.twig" with {footer_prefix:"footer__"} %}
+
+    	{% include "../block/common/modals/include.twig"%}
+    	{% include "../block/common/script/script.twig"%}
+	</body>
+</html>

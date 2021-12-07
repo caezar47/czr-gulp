@@ -1,0 +1,16 @@
+<div class="{{prefix}}block modals  fade  {{mod}}" id="{{ID}}" tabindex="-1" role="dialog" aria-hidden="true">
+	<div class="{{prefix}}dialog  {{mod}}">
+		<div class="{{prefix}}body  {{mod}}" >
+			<button type="button" class="{{prefix}}btn-close  modal-close" data-dismiss="modal" aria-hidden="true">
+				{% include "../svg-sprite/svg.twig" with {icon:"modal-close"} %}
+			</button>
+			<div class="{{prefix}}content  {{mod}}">
+				{% if ID == "modal-message" %}
+					{% include "../page-header/tpl.twig" with {prefix:"page-header__", mod:heading_mod, group:heading_group, level:heading_level, heading:heading, level_sm:heading_sm_level, heading:heading_sm, bread:bread, bread_mod:bread_mod, bread_l1:bread_l1, bread_l1_link:bread_l1_link, bread_l2:bread_l2, bread_l2_link:bread_l2_link } %}
+				{% else %}
+					{% include "../form/form.twig" with {view: "call", prefix:"form__", mod:"", ID: form_id, heading:heading, heading_mod:heading_mod, heading_view:heading_view, level:heading_level, heading_sm_level:heading_sm_level, heading_sm:heading_sm, bread:null, btn_name:btn_name } %}
+				{% endif %}	
+			</div> 
+		</div>
+	</div>
+</div>

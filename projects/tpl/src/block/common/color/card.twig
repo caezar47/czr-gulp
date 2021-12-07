@@ -1,0 +1,12 @@
+{% for value in list %}	
+<div class="{{group}}">
+	<div class="{{prefix}}card">
+		<div class="{{prefix}}view  color--bg-{{value.color}}"></div>
+		<div class="{{prefix}}name">
+			<p>@{{value.color}}</p>
+			<p>.color--{{value.color}}</p>
+			<p>.color--bg-{{value.color}}</p> 
+		</div>
+	</div>
+</div>
+{% endfor %}

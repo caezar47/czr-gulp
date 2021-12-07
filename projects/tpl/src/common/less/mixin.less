@@ -1,0 +1,142 @@
+//===== media point =====//
+.media-breakpoint-up(@screen; @rules){
+	@media (min-width: @screen){
+		@rules();
+	}
+}
+.media-breakpoint-down(@screen; @rules){
+	@media (max-width: @screen - 0.02){
+		@rules();
+	}
+}
+//===== media point =====//
+@media-point-xxs: ~"(max-width: 565px)";
+@media-point-xxs-l: ~"(max-width: 565px) and (orientation:landscape)";
+@media-point-xs: ~"(min-width: 567px) and (max-width: 767px)";
+@media-point-sm: ~"(min-width: 768px) and (max-width: 991px)";
+@media-point-smx: ~"(min-width: 567px) and (max-width: 1399px)";
+@media-point-md: ~"(min-width: 992px) and (max-width: 1199px)";
+@media-point-md1: ~"(min-width: 992px) and (max-width: 1024px)";
+@media-point-md2: ~"(min-width: 1025px) and (max-width: 1199px)";
+@media-point-lg: ~"(min-width: 1200px) and (max-width: 1399px)";
+@media-point-lg1: ~"(min-width: 1200px) and (max-width: 1299px)";
+@media-point-lg2: ~"(min-width: 1300px) and (max-width: 1399px)";
+@media-point-mdl: ~"(min-width: 992px) and (max-width: 1399px)";
+@media-point-mdl2: ~"(min-width: 1025px) and (max-width: 1399px)";
+@media-point-xl: ~"(min-width: 1400px) and (max-width: 1699px)";
+@media-point-xxl: ~"(min-width: 1700px)";
+@media-point-screen: ~"(min-width: 1025px)";
+@media-point-screen-lg: ~"(min-width: 1200px)";
+@media-point-screen-xl: ~"(min-width: 1400px)";
+@media-point-device: ~"(max-width: 1024px)";
+@media-point-device-lg: ~"(max-width: 1199px)";
+@media-point-device-xl: ~"(max-width: 1399px)";
+@media-point-tablet: ~"(min-width: 768px) and (max-width: 1024px)";
+@media-point-tablet-xs: ~"(min-width: 567px) and (max-width: 1024px)";
+@media-point-tablet-lg: ~"(min-width: 768px) and (max-width: 1199px)";
+@media-point-smart: ~"(max-width: 767px)";
+@media-point-smart-lg: ~"(max-width: 991px)";
+@media-point-notsmart: ~"(min-width: 768px)";
+@media-point-notsmart-lg: ~"(min-width: 992px)";
+@media-point-notxxs: ~"(min-width: 567px)";
+
+//===== heading =====//
+.heading1(){
+	.calcFontSize(30, 56, 320, 1680);
+	.calcLineHeight(34, 60, 320, 1680);
+}
+.heading2(){
+	.calcFontSize(28, 46, 320, 1680);
+	.calcLineHeight(32, 50, 320, 1680);
+}
+.heading3(){
+	.calcFontSize(24, 34, 320, 1680);
+	.calcLineHeight(28, 38, 320, 1680);
+}
+.heading4(){
+	.calcFontSize(24, 30, 320, 1680);
+	.calcLineHeight(28, 34, 320, 1680);
+}
+.heading5(){
+	.calcFontSize(20, 23, 320, 1680);
+	.calcLineHeight(23, 27, 320, 1680);
+	//font-size: @b-fs + 2;
+	//line-height: @b-lh - 2;	
+}
+.heading6(){
+	//.calcFontSize(14, 15, 320, 1680);
+	//.calcLineHeight(16, 18, 320, 1680);	
+	font-size: @b-fs;
+	line-height: @b-lh;	
+}
+
+//===== adaptiv fs and lh =====//
+.calcFontSize(@f-min, @f-max, @v-min, @v-max){
+	font-size: ~"calc( (100vw - @{v-min}px) / (@{v-max} - @{v-min}) * (@{f-max} - @{f-min}) + @{f-min}px)";
+}
+.calcLineHeight(@f-min, @f-max, @v-min, @v-max){
+	line-height: ~"calc( (100vw - @{v-min}px) / (@{v-max} - @{v-min}) * (@{f-max} - @{f-min}) + @{f-min}px)";
+}
+//===== flex cols =====//
+.makeCols(@columns, @grid-columns) {
+    flex-basis: percentage((@columns / @grid-columns));
+    max-width: percentage((@columns / @grid-columns));
+}
+.makeColsOffset(@columns, @grid-columns) {
+	@percentage: percentage((@columns / @grid-columns ));
+    margin-left: ~"calc(@{percentage})";
+}
+.makeColsOffset(@columns, @grid-columns) {
+	@percentage: percentage((@columns / @grid-columns ));
+    margin-left: ~"calc(@{percentage})";
+}
+.makeColsPull(@columns, @grid-columns) {
+	@percentage: percentage((@columns / @grid-columns ));
+    margin-right: ~"calc(@{percentage})";
+}
+
+.margin_generator(@i: 1) when (@i <= length(@margin_map)) {
+	@item: extract(@margin_map, @i);
+	@name: extract(@item, 1);
+	@mb_lg: extract(@item, 2);
+	@mb_xs: extract(@item, 3);
+
+	.margin--@{name} {
+		margin-bottom: @mb_xs;
+		.media-breakpoint-up(@lg; {
+			margin-bottom: @mb_lg;
+		});
+	}
+	.margin_generator((@i + 1));
+}
+.font_weight_generator(@i: 1) when (@i <= length(@fw_map)) {
+	@item: extract(@fw_map, @i);
+	@name: extract(@item, 2);
+
+	.fw--@{name} {
+		font-weight: @name;
+	}
+	.font_weight_generator((@i + 1));
+}
+//===== btn clearfix =====//
+.btn-clearfix(){
+	outline: none;
+	background: none;
+	text-decoration: none;
+	transition: @trs-site;
+	border: 0;
+	padding: 0;
+}
+.img-fit(@fit: cover){	
+	width: 100%;
+	height: 100%;
+	object-fit: @fit;
+}
+.visually-hidden(){	
+	position: absolute;
+	appearance: none;
+	width: 1px;
+	height: 1px;
+	margin: -1px;
+	clip: rect(0 0 0 0);
+}
