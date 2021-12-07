@@ -60,22 +60,22 @@ const path = {
 	}
 };
 function watching(done){
-    gulp.watch(path.src.less + "/**/*.less", styles);
-    gulp.watch(path.src.common + "/**/*.less", styles);
-    gulp.watch(path.src._ + "/concat.block.less", styles);
-    gulp.watch(path.src.block + "/**/*.less", stylesConcat);
+  gulp.watch(path.src.less + "/**/*.less", styles);
+  gulp.watch(path.src.common + "/**/*.less", styles);
+  gulp.watch(path.src._ + "/concat.block.less", styles);
+  gulp.watch(path.src.block + "/**/*.less", stylesConcat);
 
-    gulp.watch(path.src.html + "/**/*.twig", html);
-    gulp.watch(path.src.block + "/**/*.twig", html);
-    gulp.watch(path.src.json + "/**/*.json", html);
+  gulp.watch(path.src.html + "/**/*.twig", html);
+  gulp.watch(path.src.block + "/**/*.twig", html);
+  gulp.watch(path.src.json + "/**/*.json", html);
 
-    gulp.watch(path.src.email + "/**/*.twig", email);
-    gulp.watch(path.block.email + "/**/*.twig", email);
-    gulp.watch(path.src.json + "/**/*.json", email);
+  gulp.watch(path.src.email + "/**/*.twig", email);
+  gulp.watch(path.block.email + "/**/*.twig", email);
+  gulp.watch(path.src.json + "/**/*.json", email);
 
-    gulp.watch(path.src.img + "/**/*", webpGen);
-    gulp.watch(path.src.img + "/**/*", imgGen);
-    gulp.watch(path.src.svg + "/**/*", svg);
+  gulp.watch(path.src.img + "/**/*", webpGen);
+  gulp.watch(path.src.img + "/**/*", imgGen);
+  gulp.watch(path.src.svg + "/**/*", svg);
 
 	gulp.watch(path.src._ + '/concat.plugin.js', js);
 	gulp.watch(path.src._ + '/concat.body.on.js', js);
@@ -100,7 +100,7 @@ function watching(done){
 
 browserSync.init({
 	server : path.build.root,	
-    port : parseInt(argv.port) || 10080,
+  port : parseInt(argv.port) || 10080,
 	ui : {
 		port : parseInt(argv.port) + 1 || 10081,
 	}
@@ -109,13 +109,14 @@ browserSync.init({
 function html(done){
 	return gulp.src(path.src.html + '/**/*.twig')  
     .pipe(plumber()) 
+    //.pipe(webpHTML())
    	.pipe(data(function (file) {
 		return JSON.parse(
-		fs.readFileSync(path.src.json + '/data.twig.json'));
-	}))
+			fs.readFileSync(path.src.json + '/data.twig.json'));
+		}))
     .pipe(twig())
-	.pipe(gulp.dest(path.build.html))
-	.pipe(browserSync.reload({ stream: true }))  
+		.pipe(gulp.dest(path.build.html))
+		.pipe(browserSync.reload({ stream: true }))  
     done();
 } 
 function email(done){
